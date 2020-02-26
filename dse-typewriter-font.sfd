@@ -22,7 +22,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1582156054
-ModificationTime: 1582750432
+ModificationTime: 1582750656
 PfmFamily: 17
 TTFWeight: 400
 TTFWidth: 5
@@ -51,7 +51,7 @@ NameList: AGL For New Fonts
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 32 16 8
+WinInfo: 128 16 8
 BeginPrivate: 0
 EndPrivate
 Grid
@@ -8365,6 +8365,7 @@ Encoding: 72 72 1
 Width: 1024
 VWidth: 0
 Flags: HW
+AnchorPoint: "top" 512 1272 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -8427,6 +8428,7 @@ Encoding: 79 79 2
 Width: 1024
 VWidth: 0
 Flags: HW
+AnchorPoint: "top" 512 1272 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -8448,6 +8450,7 @@ Encoding: 73 73 3
 Width: 1024
 VWidth: 0
 Flags: HW
+AnchorPoint: "top" 512 1272 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -8938,6 +8941,7 @@ Encoding: 85 85 25
 Width: 1024
 VWidth: 0
 Flags: HW
+AnchorPoint: "top" 512 1272 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -8986,6 +8990,7 @@ Encoding: 74 74 26
 Width: 1023
 VWidth: 0
 Flags: HW
+AnchorPoint: "top" 512 1272 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -9102,6 +9107,7 @@ Encoding: 86 86 29
 Width: 1024
 VWidth: 0
 Flags: HW
+AnchorPoint: "top" 512 1272 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -9140,6 +9146,7 @@ Encoding: 89 89 30
 Width: 1024
 VWidth: 0
 Flags: HW
+AnchorPoint: "top" 512 1272 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -9474,6 +9481,7 @@ Encoding: 69 69 40
 Width: 1024
 VWidth: 0
 Flags: HW
+AnchorPoint: "top" 512 1272 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -9526,6 +9534,7 @@ Encoding: 70 70 41
 Width: 1024
 VWidth: 0
 Flags: HW
+AnchorPoint: "top" 512 1272 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -9575,6 +9584,7 @@ Encoding: 75 75 42
 Width: 1024
 VWidth: 0
 Flags: HW
+AnchorPoint: "top" 512 1272 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -9634,6 +9644,7 @@ Encoding: 76 76 43
 Width: 1024
 VWidth: 0
 Flags: HW
+AnchorPoint: "top" 512 1272 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -9669,6 +9680,7 @@ Encoding: 88 88 44
 Width: 1024
 VWidth: 0
 Flags: HW
+AnchorPoint: "top" 512 1272 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -9722,6 +9734,7 @@ Encoding: 77 77 45
 Width: 1024
 VWidth: 0
 Flags: HW
+AnchorPoint: "top" 512 1272 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -9778,6 +9791,7 @@ Encoding: 78 78 46
 Width: 1024
 VWidth: 0
 Flags: HW
+AnchorPoint: "top" 512 1272 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -9824,6 +9838,7 @@ Encoding: 87 87 47
 Width: 1024
 VWidth: 0
 Flags: HW
+AnchorPoint: "top" 512 1272 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -9872,6 +9887,7 @@ Encoding: 90 90 48
 Width: 1024
 VWidth: 0
 Flags: HW
+AnchorPoint: "top" 512 1272 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -9904,6 +9920,7 @@ Encoding: 65 65 49
 Width: 1024
 VWidth: 0
 Flags: HW
+AnchorPoint: "top" 512 1272 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -9949,6 +9966,7 @@ Encoding: 84 84 50
 Width: 1024
 VWidth: 0
 Flags: HW
+AnchorPoint: "top" 512 1272 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -10252,6 +10270,7 @@ Encoding: 66 66 58
 Width: 1024
 VWidth: 0
 Flags: HW
+AnchorPoint: "top" 512 1272 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -11020,6 +11039,7 @@ Encoding: 68 68 75
 Width: 1024
 VWidth: 0
 Flags: HW
+AnchorPoint: "top" 512 1272 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -11061,6 +11081,7 @@ Encoding: 80 80 76
 Width: 1024
 VWidth: 0
 Flags: HW
+AnchorPoint: "top" 512 1272 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -11109,6 +11130,7 @@ Encoding: 82 82 77
 Width: 1024
 VWidth: 0
 Flags: HW
+AnchorPoint: "top" 512 1272 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -11396,6 +11418,7 @@ Encoding: 81 81 83
 Width: 1024
 VWidth: 0
 Flags: HW
+AnchorPoint: "top" 512 1272 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -11565,6 +11588,7 @@ Encoding: 67 67 87
 Width: 1024
 VWidth: 0
 Flags: HW
+AnchorPoint: "top" 512 1272 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -11601,6 +11625,7 @@ Encoding: 71 71 88
 Width: 1024
 VWidth: 0
 Flags: HW
+AnchorPoint: "top" 512 1272 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -11989,6 +12014,7 @@ Encoding: 83 83 96
 Width: 1024
 VWidth: 0
 Flags: HW
+AnchorPoint: "top" 512 1272 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -12851,6 +12877,7 @@ Encoding: 768 768 116
 Width: 0
 VWidth: 0
 Flags: HW
+AnchorPoint: "top" 512 1272 mark 0
 LayerCount: 2
 Fore
 SplineSet
@@ -12869,6 +12896,7 @@ Encoding: 769 769 117
 Width: 0
 VWidth: 0
 Flags: HW
+AnchorPoint: "top" 512 1272 mark 0
 LayerCount: 2
 Fore
 SplineSet
@@ -12887,6 +12915,7 @@ Encoding: 770 770 118
 Width: 0
 VWidth: 0
 Flags: H
+AnchorPoint: "top" 512 1272 mark 0
 LayerCount: 2
 Fore
 SplineSet
@@ -12908,6 +12937,7 @@ Encoding: 771 771 119
 Width: 1024
 VWidth: 0
 Flags: HW
+AnchorPoint: "top" 512 1272 mark 0
 LayerCount: 2
 Fore
 SplineSet
@@ -12930,6 +12960,7 @@ Encoding: 774 774 120
 Width: 0
 VWidth: 0
 Flags: H
+AnchorPoint: "top" 512 1272 mark 0
 LayerCount: 2
 Fore
 SplineSet
@@ -12950,6 +12981,7 @@ Encoding: 775 775 121
 Width: 0
 VWidth: 0
 Flags: H
+AnchorPoint: "top" 512 1272 mark 0
 LayerCount: 2
 Fore
 SplineSet
@@ -12966,6 +12998,7 @@ Encoding: 776 776 122
 Width: 1024
 VWidth: 0
 Flags: HW
+AnchorPoint: "top" 512 1272 mark 0
 LayerCount: 2
 Fore
 SplineSet
@@ -12987,6 +13020,7 @@ Encoding: 773 773 123
 Width: 1024
 VWidth: 0
 Flags: HW
+AnchorPoint: "top" 512 1272 mark 0
 LayerCount: 2
 Fore
 SplineSet
@@ -13005,6 +13039,7 @@ Encoding: 772 772 124
 Width: 0
 VWidth: 0
 Flags: H
+AnchorPoint: "top" 512 1272 mark 0
 LayerCount: 2
 Fore
 SplineSet
@@ -13023,6 +13058,7 @@ Encoding: 778 778 125
 Width: 0
 VWidth: 0
 Flags: H
+AnchorPoint: "top" 512 1272 mark 0
 LayerCount: 2
 Fore
 SplineSet
@@ -13044,6 +13080,7 @@ Encoding: 779 779 126
 Width: 0
 VWidth: 0
 Flags: H
+AnchorPoint: "top" 512 1272 mark 0
 LayerCount: 2
 Fore
 SplineSet
@@ -13069,6 +13106,7 @@ Encoding: 780 780 127
 Width: 0
 VWidth: 0
 Flags: HW
+AnchorPoint: "top" 512 1272 mark 0
 LayerCount: 2
 Fore
 SplineSet
@@ -13090,6 +13128,7 @@ Encoding: 783 783 128
 Width: 0
 VWidth: 0
 Flags: HW
+AnchorPoint: "top" 512 1272 mark 0
 LayerCount: 2
 Fore
 SplineSet
@@ -13116,6 +13155,9 @@ Width: 1024
 VWidth: 0
 Flags: HW
 LayerCount: 2
+Fore
+Refer: 116 768 N 1 0 0 1 0 0 2
+Refer: 49 65 N 1 0 0 1 0 0 3
 EndChar
 EndChars
 EndSplineFont
