@@ -22,7 +22,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1582156054
-ModificationTime: 1582750656
+ModificationTime: 1582751009
 PfmFamily: 17
 TTFWeight: 400
 TTFWidth: 5
@@ -51,7 +51,7 @@ NameList: AGL For New Fonts
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 128 16 8
+WinInfo: 720 16 8
 BeginPrivate: 0
 EndPrivate
 Grid
@@ -12874,7 +12874,7 @@ EndChar
 
 StartChar: gravecomb
 Encoding: 768 768 116
-Width: 0
+Width: 1024
 VWidth: 0
 Flags: HW
 AnchorPoint: "top" 512 1272 mark 0
@@ -12893,7 +12893,7 @@ EndChar
 
 StartChar: acutecomb
 Encoding: 769 769 117
-Width: 0
+Width: 1024
 VWidth: 0
 Flags: HW
 AnchorPoint: "top" 512 1272 mark 0
@@ -12912,9 +12912,9 @@ EndChar
 
 StartChar: uni0302
 Encoding: 770 770 118
-Width: 0
+Width: 1024
 VWidth: 0
-Flags: H
+Flags: HW
 AnchorPoint: "top" 512 1272 mark 0
 LayerCount: 2
 Fore
@@ -12957,9 +12957,9 @@ EndChar
 
 StartChar: uni0306
 Encoding: 774 774 120
-Width: 0
+Width: 1024
 VWidth: 0
-Flags: H
+Flags: HW
 AnchorPoint: "top" 512 1272 mark 0
 LayerCount: 2
 Fore
@@ -12978,9 +12978,9 @@ EndChar
 
 StartChar: uni0307
 Encoding: 775 775 121
-Width: 0
+Width: 1024
 VWidth: 0
-Flags: H
+Flags: HW
 AnchorPoint: "top" 512 1272 mark 0
 LayerCount: 2
 Fore
@@ -13036,9 +13036,9 @@ EndChar
 
 StartChar: uni0304
 Encoding: 772 772 124
-Width: 0
+Width: 1024
 VWidth: 0
-Flags: H
+Flags: HW
 AnchorPoint: "top" 512 1272 mark 0
 LayerCount: 2
 Fore
@@ -13055,9 +13055,9 @@ EndChar
 
 StartChar: uni030A
 Encoding: 778 778 125
-Width: 0
+Width: 1024
 VWidth: 0
-Flags: H
+Flags: HW
 AnchorPoint: "top" 512 1272 mark 0
 LayerCount: 2
 Fore
@@ -13077,9 +13077,9 @@ EndChar
 
 StartChar: uni030B
 Encoding: 779 779 126
-Width: 0
+Width: 1024
 VWidth: 0
-Flags: H
+Flags: HW
 AnchorPoint: "top" 512 1272 mark 0
 LayerCount: 2
 Fore
@@ -13103,7 +13103,7 @@ EndChar
 
 StartChar: uni030C
 Encoding: 780 780 127
-Width: 0
+Width: 1024
 VWidth: 0
 Flags: HW
 AnchorPoint: "top" 512 1272 mark 0
@@ -13125,7 +13125,7 @@ EndChar
 
 StartChar: uni030F
 Encoding: 783 783 128
-Width: 0
+Width: 1024
 VWidth: 0
 Flags: HW
 AnchorPoint: "top" 512 1272 mark 0
