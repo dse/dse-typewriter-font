@@ -20,10 +20,11 @@ while (<>) {
         my $width = $1;
         $char->{width} = $1;
         if ($width != 1024) {
-            warn(sprintf("%s line %d: char %s width is %d, should be 1024\n",
+            warn(sprintf("%s line %d: char %s (U+%04X) width is %d, should be 1024\n",
                          $char->{filename},
                          $char->{lineNumber},
                          $char->{charName},
+                         $char->{encoding}->[1],
                          $char->{width}));
         }
     } elsif (m{^\s*endchar\s*$}i) {
