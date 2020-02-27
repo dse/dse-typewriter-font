@@ -1,9 +1,9 @@
 SplineFontDB: 3.2
-FontName: Untitled1
-FullName: Untitled1
-FamilyName: Untitled1
+FontName: DSETypewriter
+FullName: DSE Typewriter
+FamilyName: DSE Typewriter
 Weight: Regular
-Copyright: Copyright (c) 2020, 501475791
+Copyright: Copyright (c) 2020, Darren Embry\n\nSIL OFL 1.1\n
 UComments: "2020-2-19: Created with FontForge (http://fontforge.org)"
 Version: 001.000
 StrokeWidth: 96
@@ -22,7 +22,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1582156054
-ModificationTime: 1582842620
+ModificationTime: 1582843054
 PfmFamily: 17
 TTFWeight: 400
 TTFWidth: 5
@@ -51,7 +51,7 @@ NameList: AGL For New Fonts
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 8128 32 8
+WinInfo: 0 32 8
 BeginPrivate: 0
 EndPrivate
 Grid
