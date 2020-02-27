@@ -19053,7 +19053,7 @@ EndChar
 
 StartChar: uniE033
 Encoding: 57395 57395 480
-Width: 1016
+Width: 1024
 VWidth: 0
 Flags: HW
 LayerCount: 2
@@ -20006,7 +20006,7 @@ EndChar
 
 StartChar: uniE04A
 Encoding: 57418 57418 503
-Width: 1023
+Width: 1024
 VWidth: 0
 Flags: HW
 AnchorPoint: "top" 656 1272 basechar 0
@@ -21694,7 +21694,7 @@ EndChar
 
 StartChar: uniE073
 Encoding: 57459 57459 544
-Width: 1037
+Width: 1024
 VWidth: 0
 Flags: HW
 AnchorPoint: "top" 512 912 basechar 0
@@ -22372,7 +22372,7 @@ EndChar
 
 StartChar: uniE0A4
 Encoding: 57508 57508 561
-Width: 2048
+Width: 1024
 VWidth: 0
 Flags: HW
 LayerCount: 2
@@ -22627,7 +22627,7 @@ EndChar
 
 StartChar: uniE0A9
 Encoding: 57513 57513 566
-Width: 2048
+Width: 1024
 VWidth: 0
 Flags: HW
 LayerCount: 2
@@ -22762,7 +22762,7 @@ EndChar
 
 StartChar: uniE0AB
 Encoding: 57515 57515 568
-Width: 2048
+Width: 1024
 VWidth: 0
 Flags: HW
 LayerCount: 2
@@ -22835,7 +22835,7 @@ EndChar
 
 StartChar: uniE0AE
 Encoding: 57518 57518 571
-Width: 2048
+Width: 1024
 VWidth: 0
 Flags: HW
 LayerCount: 2
@@ -23039,7 +23039,7 @@ EndChar
 
 StartChar: uniE0B3
 Encoding: 57523 57523 576
-Width: 1007
+Width: 1024
 VWidth: 0
 Flags: HW
 LayerCount: 2
@@ -23153,7 +23153,7 @@ EndChar
 
 StartChar: uniE0B6
 Encoding: 57526 57526 579
-Width: 1027
+Width: 1024
 VWidth: 0
 Flags: HW
 AnchorPoint: "top" 512 1272 basechar 0
@@ -23213,7 +23213,7 @@ EndChar
 
 StartChar: uniE0B8
 Encoding: 57528 57528 581
-Width: 0
+Width: 1024
 VWidth: 0
 Flags: HW
 AnchorPoint: "cedilla" 512 32 mark 0
@@ -23273,7 +23273,7 @@ EndChar
 
 StartChar: uniE0BA
 Encoding: 57530 57530 583
-Width: 1018
+Width: 1024
 VWidth: 0
 Flags: HW
 LayerCount: 2
@@ -23295,7 +23295,7 @@ EndChar
 
 StartChar: uniE0BB
 Encoding: 57531 57531 584
-Width: 2048
+Width: 1024
 VWidth: 0
 Flags: HW
 LayerCount: 2
