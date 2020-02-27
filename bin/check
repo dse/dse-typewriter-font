@@ -1,0 +1,32 @@
+#!/usr/bin/env perl
+use warnings;
+use strict;
+use v5.10.0;
+
+my $char;
+
+while (<>) {
+    s{\R\z}{};
+    if (m{^\s*startchar:\s*(.*?)\s*$}i) {
+        $char = {
+            charName => $1,
+            filename => $ARGV,
+            lineNumber => $.,
+        };
+    } elsif (defined $char && m{^\s*encoding:(?:\s+(\d+))?(?:\s+(\d+))?(?:\s+(\d+))?\s*$}i) {
+        my @encoding = ($1, $2, $3);
+        $char->{encoding} = \@encoding;
+    } elsif (defined $char && m{^\s*width:\s*(\d+)\s*$}i) {
+        my $width = $1;
+        $char->{width} = $1;
+        if ($width != 1024) {
+            warn(sprintf("%s line %d: char %s width is %d, should be 1024\n",
+                         $char->{filename},
+                         $char->{lineNumber},
+                         $char->{charName},
+                         $char->{width}));
+        }
+    } elsif (m{^\s*endchar\s*$}i) {
+        $char = undef;
+    }
+}
