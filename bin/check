@@ -27,7 +27,11 @@ while (<>) {
                          $char->{encoding}->[1],
                          $char->{width}));
         }
+        $_ = "Width: 1024";
     } elsif (m{^\s*endchar\s*$}i) {
         $char = undef;
+    }
+    if (!-t 1) {
+        print "$_\n";
     }
 }
