@@ -12,6 +12,3 @@ EXAMPLES    and/or; c:\windows\run.exe; 987 - 377; 12 + 1 = 11 + 2; #12 & 35 @$1
             |pipes| (parens) <angle> [square] {curly} `backticks` 'single' "double" *emphasis* _emphasis_ ~sarcasm~
             couldn't; couldn't've; fo'c's'le; tête-à-tête; piñata; encyclopædia; ¿por que? ¡mas, ese! 8′5″ §25 ¶25
             ‘single’ “double” «angle»; en–dash; em—dash; hy‐phen; hyphen-minus; figure dash 01234‒56789
-
-
-
