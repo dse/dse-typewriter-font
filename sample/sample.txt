@@ -1,3 +1,4 @@
+PI          3.14159265358979323846264338327950288419716939937510582097494459230781640628620899862803482534211706798215
 ASCII       !"#$%&'()*+,-./ :;<=>?@ [\]^_` {|}~ 0123456789 ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz
 LATIN-1     ¡¢£¤¥¦§¨©ª«¬®¯°±²³´µ¶·¸¹º»¼½¾¿×÷ ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝÞß àáâãäåæçèéêëìíîïðñòóôõöøùúûüýþÿ
 PANGRAMS    Mr. Jock, TV quiz Ph.D., bags few lynx.     MR. JOCK, TV QUIZ PH.D., BAGS FEW LYNX.
