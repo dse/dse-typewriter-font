@@ -22,6 +22,10 @@ And to practice editing fonts directly in FontForge.
 -   There aren't any hints.  Chances are, at any particular point in
     time, my brain is too mush to learn how to do those.
 
+## License
+
+[SIL OFL 1.1](LICENSE.md)
+
 ## Preview
 
 ![Coding](images/2020-02-27-coding-2.png)
