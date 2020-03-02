@@ -22,6 +22,11 @@ And to practice editing fonts directly in FontForge.
 -   There aren't any hints.  Chances are, at any particular point in
     time, my brain is too mush to learn how to do those.
 
+## See Also
+
+See <https://github.com/dse/dse-typewriter-bitmap-font/> for DSE
+Typewriter Bitmap, a couple bitmap fonts I created **long** ago.
+
 ## License
 
 [SIL OFL 1.1](LICENSE.md)
