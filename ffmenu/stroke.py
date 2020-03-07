@@ -8,6 +8,7 @@ def updateGlyph(font, glyph):
     fg = glyph.foreground
     print("    glyph.foreground = %s" % fg)
     if not bg.isEmpty():
+        width = glyph.width
         glyph.activeLayer = 'Fore'
         pen = glyph.glyphPen()
         glyph.activeLayer = 'Back'
@@ -17,8 +18,13 @@ def updateGlyph(font, glyph):
         glyph.activeLayer = 'Fore'
         # glyph.round()
         glyph.stroke('circular', 96, 'round', 'round')
+        # glyph.stroke("circular",width[,linecap,linejoin,flags])
+        # glyph.stroke("eliptical",width,minor-width,angle[,linecap,linejoin,flags])
+        # glyph.stroke("caligraphic",width,height,angle[,flags])
+        # glyph.stroke("polygon",contour[,flags])
         glyph.removeOverlap()
         glyph.addExtrema()
+        glyph.width = width
 
         # font.selection.select(glyph)
         # font.cut()
