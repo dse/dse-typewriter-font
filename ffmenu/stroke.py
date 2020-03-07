@@ -9,38 +9,34 @@ def updateGlyph(font, glyph):
     print("    glyph.foreground = %s" % fg)
     if not bg.isEmpty():
         width = glyph.width
-        glyph.activeLayer = 'Fore'
-        pen = glyph.glyphPen()
-        glyph.activeLayer = 'Back'
-        glyph.draw(pen)
-        pen = None
 
         glyph.activeLayer = 'Fore'
-        # glyph.round()
+
+        # save
+        anchorPoints = glyph.anchorPoints
+
+        glyph.activeLayer = 'Fore'
+        pen = glyph.glyphPen()
+
+        glyph.activeLayer = 'Back'
+        glyph.draw(pen)
+
+        pen = None              # done
+
+        glyph.activeLayer = 'Fore'
+
         glyph.stroke('circular', 96, 'round', 'round')
-        # glyph.stroke("circular",width[,linecap,linejoin,flags])
-        # glyph.stroke("eliptical",width,minor-width,angle[,linecap,linejoin,flags])
-        # glyph.stroke("caligraphic",width,height,angle[,flags])
-        # glyph.stroke("polygon",contour[,flags])
+        #     glyph.stroke("circular",width[,linecap,linejoin,flags])
+        #     glyph.stroke("eliptical",width,minor-width,angle[,linecap,linejoin,flags])
+        #     glyph.stroke("caligraphic",width,height,angle[,flags])
+        #     glyph.stroke("polygon",contour[,flags])
         glyph.removeOverlap()
         glyph.addExtrema()
         glyph.width = width
 
-        # font.selection.select(glyph)
-        # font.cut()
-
-        # glyph.activeLayer = 'Back'
-        # font.selection.select(glyph)
-        # font.copy()
-
-        # glyph.activeLayer = 'Fore'
-        # font.selection.select(glyph)
-        # font.paste()
-
-        # glyph.round()
-        # glyph.stroke('circular', 96, 'round', 'round')
-        # glyph.removeOverlap()
-        # glyph.addExtrema()
+        # restore
+        for anchorPoint in anchorPoints:
+            glyph.addAnchorPoint(*anchorPoint)
 
 activeFont = fontforge.activeFont()
 
