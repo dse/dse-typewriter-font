@@ -1,15 +1,19 @@
-PI          3.14159265358979323846264338327950288419716939937510582097494459230781640628620899862803482534211706798215
-ASCII       !"#$%&'()*+,-./ :;<=>?@ [\]^_` {|}~ 0123456789 ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz
-LATIN-1     ¡¢£¤¥¦§¨©ª«¬®¯°±²³´µ¶·¸¹º»¼½¾¿×÷ ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝÞß àáâãäåæçèéêëìíîïðñòóôõöøùúûüýþÿ
-PANGRAMS    Mr. Jock, TV quiz Ph.D., bags few lynx.     MR. JOCK, TV QUIZ PH.D., BAGS FEW LYNX.
-            GQ's oft lucky whiz Dr. J, ex-NBA MVP       GQ'S OFT LUCKY WHIZ DR. J, EX-NBA MVP
-            Sphinx of black quartz, judge my vow.       SPHINX OF BLACK QUARTZ, JUDGE MY VOW.
-            Pack my box with five dozen liquor jugs.    PACK MY BOX WITH FIVE DOZEN LIQUOR JUGS.
-CODING      li1|  lowercase l; lowercase i; digit one (1); vertical bar (|)
-            Oo0   uppercase O; lowercase o; digit zero (0)
-            `'    backtick (`); apostrophe (')
-            ''"   two apostrophes (''); quotation mark (")
-EXAMPLES    and/or; c:\windows\run.exe; 987 - 377; 12 + 1 = 11 + 2; #12 & 35 @$19.99; 20% off; yes? why, yes!
-            |pipes| (parens) <angle> [square] {curly} `backticks` 'single' "double" *emphasis* _emphasis_ ~sarcasm~
-            couldn't; couldn't've; fo'c's'le; tête-à-tête; piñata; encyclopædia; ¿por que? ¡mas, ese! 8′5″ §25 ¶25
-            ‘single’ “double” «angle»; en–dash; em—dash; hy‐phen; hyphen-minus; figure dash 01234‒56789
+3.14159265358979323846264338327950288419716939937510582097494459230816406286208
+ASCII   !"#$%&'()*+,-./:;<=>?@[\]^_`{|}~ 0123456789 ABCDEFGHIJKLMNOPQRSTUVWXYZ
+                                                    abcdefghijklmnopqrstuvwxyz
+LATIN-1 ¡¢£¤¥¦§¨©ª«¬®¯°±²³´µ¶·¸¹º»¼½¾¿×÷ ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝÞß
+                                         àáâãäåæçèéêëìíîïðñòóôõöøùúûüýþÿ
+CODING  li1|  lowercase l; lowercase i; digit one (1); vertical bar (|)
+        Oo0   uppercase O; lowercase o; digit zero (0)
+        `'    backtick (`); apostrophe (')
+        ''"   two apostrophes (''); quotation mark (")
+Mr. Jock, TV quiz Ph.D., bags few lynx  MR. JOCK, TV QUIZ PH.D., BAGS FEW LYNX
+GQ's oft lucky whiz Dr. J, ex-NBA MVP   GQ'S OFT LUCKY WHIZ DR. J, EX-NBA MVP
+Sphinx of black quartz, judge my vow    SPHINX OF BLACK QUARTZ, JUDGE MY VOW
+Pack my box with five dozen liquor jugs PACK MY BOX WITH FIVE DOZEN LIQUOR JUGS
+and/or; c:\windows\run.exe; 987 - 377; 12 + 1 = 11 + 2; #12 & 35 @$19.99;
+couldn't; couldn't've; fo'c's'le; tête-à-tête; piñata; encyclopædia;
+¿por que? ¡mas, ese! §25 ¶25; 20% off; yes? why, yes!
+|pipes| (parens) <angle> [square] {curly} `backticks` 'single' "double"
+*emphasis* _emphasis_ ~sarcasm~ /emphasis/
+‘single’; “double”; «angle»; en–dash; em—dash; hy‐phen; 01234‒56789; 8′5″
