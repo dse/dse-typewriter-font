@@ -4,34 +4,121 @@ use strict;
 use v5.10.0;
 
 my $char;
+my $layer;
 
+line:
 while (<>) {
     s{\R\z}{};
     if (m{^\s*startchar:\s*(.*?)\s*$}i) {
+        if (defined $char) {
+            processChar();
+        }
         $char = {
             charName => $1,
             filename => $ARGV,
             lineNumber => $.,
+            lines => [$_],
         };
-    } elsif (defined $char && m{^\s*encoding:(?:\s+(\d+))?(?:\s+(\d+))?(?:\s+(\d+))?\s*$}i) {
-        my @encoding = ($1, $2, $3);
-        $char->{encoding} = \@encoding;
-    } elsif (defined $char && m{^\s*width:\s*(\d+)\s*$}i) {
-        my $width = $1;
-        $char->{width} = $1;
-        if ($width != 1024) {
-            warn(sprintf("%s line %d: char %s (U+%04X) width is %d, should be 1024\n",
-                         $char->{filename},
-                         $char->{lineNumber},
-                         $char->{charName},
-                         $char->{encoding}->[1],
-                         $char->{width}));
+        $char->{toString} = $char->{charName};
+    } elsif (defined $char) {
+        if (m{^\s*encoding:(?:\s+(\d+))?(?:\s+(\d+))?(?:\s+(\d+))?\s*$}i) {
+            push(@{$char->{lines}}, $_);
+            my @encoding = ($1, $2, $3);
+            $char->{encoding} = \@encoding;
+            $char->{toString} .= sprintf(' (%d %d %d)', @encoding);
+        } elsif (m{^\s*width:\s*(\d+)\s*$}i) {
+            push(@{$char->{lines}}, $_);
+            my $width = $1;
+            $char->{width} = $1;
+            if ($width != 1024) {
+                printf("%s line %d: %s: width is %d, should be 1024\n",
+                       $char->{filename},
+                       $char->{lineNumber},
+                       $char->{toString},
+                       $char->{encoding}->[1],
+                       $char->{width});
+            }
+        } elsif (m{^\s*endchar\s*$}i) {
+            push(@{$char->{lines}}, $_);
+            processChar();
+            $char = undef;
+        } elsif (m{^\s*back\s*$}i) {
+            push(@{$char->{lines}}, $_);
+            $layer = $char->{back} = {
+                referenceCount => 0,
+                splinesetCount => 0,
+            };
+        } elsif (m{^\s*fore\s*$}i) {
+            push(@{$char->{lines}}, $_);
+            $layer = $char->{fore} = {
+                referenceCount => 0,
+                splinesetCount => 0,
+            };
+        } elsif (defined $layer && m{^\s*refer:}i) {
+            push(@{$char->{lines}}, $_);
+            $layer->{referenceCount} += 1;
+            # printf("\t\t%s: add a reference\n", $char->{toString});
+        } elsif (defined $layer && m{^\s*splineset\s*$}i) {
+            push(@{$char->{lines}}, $_);
+            push(@{$char->{lines}}, "...");
+            $layer->{splinesetCount} += 1;
+            # printf("\t\t%s: add a splineset\n", $char->{toString});
+            while (<>) {
+                s{\R\z}{};
+                if (m{^\s*endsplineset\s*$}i) {
+                    push(@{$char->{lines}}, $_);
+                    next line;
+                }
+            }
+            goto eof;
+        } else {
+            push(@{$char->{lines}}, $_);
         }
-        $_ = "Width: 1024";
-    } elsif (m{^\s*endchar\s*$}i) {
-        $char = undef;
+    } else {
     }
-    if (!-t 1) {
-        print "$_\n";
+}
+eof:
+
+processChar();
+
+sub processChar {
+    if (defined $char) {
+        my $back = $char->{back};
+        my $fore = $char->{fore};
+        if (defined $fore && defined $back) {
+            if ($fore->{splinesetCount} && $back->{splinesetCount} &&
+                    !$back->{referenceCount} && !$fore->{referenceCount}) {
+                return;
+            }
+            if ($back->{referenceCount} && !$back->{splinesetCount}
+                    && $fore->{splinesetCount} && !$fore->{referenceCount}) {
+                printf("RRR %s: references should be moved to Fore layer\n",
+                       $char->{toString});
+                return;
+            }
+        }
+        if (!defined $fore && !defined $back) {
+            return;
+        }
+        if (defined $fore && !defined $back) {
+            if ($fore->{splinesetCount} && !$fore->{referenceCount}) {
+                printf("BBB %s: needs to be converted to Back layer with stroke\n",
+                       $char->{toString});
+                return;
+            }
+            if ($fore->{referenceCount} && !$fore->{splinesetCount}) {
+                return;
+            }
+            if (!$fore->{referenceCount} && !$back->{referenceCount}) {
+                printf("    %s: likely just a space\n",
+                       $char->{toString});
+                return;
+            }
+        }
+        printf("??? %s\n",
+               $char->{toString});
+        foreach my $line (@{$char->{lines}}) {
+            printf("\t%s\n", $line);
+        }
     }
 }

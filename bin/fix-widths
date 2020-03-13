@@ -1,0 +1,24 @@
+#!/usr/bin/env perl
+use warnings;
+use strict;
+use v5.10.0;
+
+my $char;
+
+while (<>) {
+    s{\R\z}{};
+    if (m{^\s*startchar:\s*(.*?)\s*$}i) {
+        $char = {};
+    } elsif (defined $char) {
+        if (m{^\s*endchar\s*$}i) {
+            # no change
+        } elsif (m{^\s*width:\s*(\d+)\s*$}i) {
+            $_ = "Width: 1024";
+        } else {
+            # no change
+        }
+    } else {
+        # no change
+    }
+    print "$_\n";
+}
