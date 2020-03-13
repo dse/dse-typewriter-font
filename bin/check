@@ -31,11 +31,8 @@ while (<>) {
             my $width = $1;
             $char->{width} = $1;
             if ($width != 1024) {
-                printf("%s line %d: %s: width is %d, should be 1024\n",
-                       $char->{filename},
-                       $char->{lineNumber},
+                printf("WWW %s: width is %d, should be 1024\n",
                        $char->{toString},
-                       $char->{encoding}->[1],
                        $char->{width});
             }
         } elsif (m{^\s*endchar\s*$}i) {
