@@ -1,4 +1,12 @@
 #!/usr/bin/env fontforge -lang=py
+#
+# Add this script to FontForge:
+#
+# -   File -> Preferences
+# -   Script Menu
+# -   Menu Name: Update Stroke
+# -   Script File: point to this script.
+#     You may have to change the filter to *.py.
 
 import fontforge
 
@@ -25,11 +33,21 @@ def updateGlyph(font, glyph):
 
         glyph.activeLayer = 'Fore'
 
-        glyph.stroke('circular', 96, 'round', 'round')
-        #     glyph.stroke("circular",width[,linecap,linejoin,flags])
-        #     glyph.stroke("eliptical",width,minor-width,angle[,linecap,linejoin,flags])
+        strokeWidth = 96
+        if glyph.unicode >= 0x2500 and glyph.unicode < 0x2600:
+            # Box Drawing Characters
+            lineCap = 'butt'
+            lineJoin = 'round'
+        else:
+            lineCap = 'round'
+            lineJoin = 'round'
+        glyph.stroke('circular', strokeWidth, lineCap, lineJoin)
+
+        #     glyph.stroke("circular",width[,lineCap,lineJoin,flags])
+        #     glyph.stroke("eliptical",width,minor-width,angle[,lineCap,lineJoin,flags])
         #     glyph.stroke("caligraphic",width,height,angle[,flags])
         #     glyph.stroke("polygon",contour[,flags])
+
         glyph.removeOverlap()
         glyph.addExtrema()
         glyph.width = width
