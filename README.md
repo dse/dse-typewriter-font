@@ -57,7 +57,10 @@ Reproducing Typewriter).
 ## See Also
 
 See <https://github.com/dse/dse-typewriter-bitmap-font/> for DSE
-Typewriter Bitmap, a couple bitmap fonts I created **long** ago.
+Typewriter Bitmap, a couple bitmap fonts I created **long** ago.  They
+also have coding-friendly features, but only cover ASCII and Latin-1.
+There is a `.bdf` version for use in the X Window System and other
+environments that support it, and there is a `.ttf` version.
 
 ## License
 
