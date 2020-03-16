@@ -10,11 +10,19 @@ And to practice editing fonts directly in FontForge.
 ## About This Font
 
 This font is not the result of any scans or traces of samples,
-specimens, or other output from an actual typewriter.
+specimens, or other output from an actual typewriter.  I personally
+eyeballed and drew everything in FontForge.
 
-It's more like an amalgamation of old-school typewriter fonts with
-features semi-arbitrarily picked from each one, as well as a few not
-in use on actual typewriters.
+DSE Typewriter is more like an amalgamation of old-school typewriter
+fonts with features semi-arbitrarily picked from each one, as well as
+a few coding-friendly features that were not in use on actual
+typewriters of the period.
+
+Though this is intended to be useful as a coding font, I emphasized on
+aesthetics while maintaining some degree of readability.  There is
+room for improvement.  I may create a version of this that borrows
+from old "reproducing typewriter" fonts (e.g., Monotype No. 72L,
+Reproducing Typewriter).
 
 ## Features and Characteristics
 
