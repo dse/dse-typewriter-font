@@ -23,6 +23,7 @@ def copyLayer(glyph, src, dest, replace = True):
 def updateGlyph(font, glyph):
     bg = glyph.background
     fg = glyph.foreground
+    clip = False
 
     if not bg.isEmpty():
         width = glyph.width
@@ -47,8 +48,19 @@ def updateGlyph(font, glyph):
         glyph.activeLayer = 'Fore'
         glyph.stroke('circular', strokeWidth, lineCap, lineJoin)
         glyph.removeOverlap()
-        glyph.addExtrema()
         glyph.width = width
+
+        if clip:
+            clipContour = fontforge.contour()
+            clipContour.moveTo(0, font.ascent)
+            clipContour.lineTo(1024, font.ascent)
+            clipContour.lineTo(1024, -font.descent)
+            clipContour.lineTo(0, -font.descent)
+            clipContour.closed = True
+            glyph.layers['Fore'] += clipContour
+            glyph.intersect()
+
+        glyph.addExtrema()
 
         # restore anchor points
         glyph.activeLayer = 'Fore'
