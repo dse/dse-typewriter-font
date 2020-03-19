@@ -35,7 +35,8 @@ def updateGlyph(font, glyph):
 
         strokeWidth = 96
 
-        if glyph.unicode >= 0x2500 and glyph.unicode < 0x2600:
+        if (glyph.unicode >= 0x2500 and glyph.unicode < 0x2600 and
+            not (glyph.unicode >= 0x2571 and glyph.unicode <= 0x2573)):
             # Box Drawing Characters
             lineCap = 'butt'
             lineJoin = 'round'
