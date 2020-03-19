@@ -22,7 +22,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 0
 CreationTime: 1582156054
-ModificationTime: 1584585062
+ModificationTime: 1584585461
 PfmFamily: 17
 TTFWeight: 400
 TTFWidth: 5
@@ -25965,7 +25965,7 @@ EndChar
 
 StartChar: uni251D
 Encoding: 9501 9501 616
-Width: 2048
+Width: 1024
 VWidth: 0
 Flags: HW
 LayerCount: 2
@@ -26001,7 +26001,7 @@ EndChar
 
 StartChar: uni251E
 Encoding: 9502 9502 617
-Width: 2048
+Width: 1024
 VWidth: 0
 Flags: HW
 LayerCount: 2
@@ -26039,7 +26039,7 @@ EndChar
 
 StartChar: uni251F
 Encoding: 9503 9503 618
-Width: 2048
+Width: 1024
 VWidth: 0
 Flags: HW
 LayerCount: 2
@@ -26077,7 +26077,7 @@ EndChar
 
 StartChar: uni2520
 Encoding: 9504 9504 619
-Width: 2048
+Width: 1024
 VWidth: 0
 Flags: HW
 LayerCount: 2
@@ -26115,7 +26115,7 @@ EndChar
 
 StartChar: uni2521
 Encoding: 9505 9505 620
-Width: 2048
+Width: 1024
 VWidth: 0
 Flags: HW
 LayerCount: 2
@@ -26157,7 +26157,7 @@ EndChar
 
 StartChar: uni2522
 Encoding: 9506 9506 621
-Width: 2048
+Width: 1024
 VWidth: 0
 Flags: HW
 LayerCount: 2
@@ -26199,7 +26199,7 @@ EndChar
 
 StartChar: uni2523
 Encoding: 9507 9507 622
-Width: 2048
+Width: 1024
 VWidth: 0
 Flags: HW
 LayerCount: 2
@@ -27926,7 +27926,7 @@ EndChar
 
 StartChar: SF500000
 Encoding: 9560 9560 665
-Width: 2048
+Width: 1024
 VWidth: 0
 Flags: HW
 LayerCount: 2
@@ -27958,7 +27958,7 @@ EndChar
 
 StartChar: SF490000
 Encoding: 9561 9561 666
-Width: 2048
+Width: 1024
 VWidth: 0
 Flags: HW
 LayerCount: 2
@@ -27990,7 +27990,7 @@ EndChar
 
 StartChar: SF380000
 Encoding: 9562 9562 667
-Width: 2048
+Width: 1024
 VWidth: 0
 Flags: HW
 LayerCount: 2
@@ -28030,7 +28030,7 @@ EndChar
 
 StartChar: SF280000
 Encoding: 9563 9563 668
-Width: 2048
+Width: 1024
 VWidth: 0
 Flags: HW
 LayerCount: 2
@@ -28062,7 +28062,7 @@ EndChar
 
 StartChar: SF270000
 Encoding: 9564 9564 669
-Width: 2048
+Width: 1024
 VWidth: 0
 Flags: HW
 LayerCount: 2
@@ -28094,7 +28094,7 @@ EndChar
 
 StartChar: SF260000
 Encoding: 9565 9565 670
-Width: 2048
+Width: 1024
 VWidth: 0
 Flags: HW
 LayerCount: 2
@@ -28910,7 +28910,7 @@ EndChar
 
 StartChar: uni2571
 Encoding: 9585 9585 690
-Width: 2048
+Width: 1024
 VWidth: 0
 Flags: HW
 LayerCount: 2
@@ -28937,7 +28937,7 @@ EndChar
 
 StartChar: uni2572
 Encoding: 9586 9586 691
-Width: 2048
+Width: 1024
 VWidth: 0
 Flags: HW
 LayerCount: 2
