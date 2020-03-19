@@ -22,7 +22,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 0
 CreationTime: 1582156054
-ModificationTime: 1584593401
+ModificationTime: 1584593903
 PfmFamily: 17
 TTFWeight: 400
 TTFWidth: 5
@@ -54,7 +54,7 @@ NameList: AGL For New Fonts
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 736 16 8
+WinInfo: 16 16 8
 BeginPrivate: 0
 EndPrivate
 Grid
@@ -11139,6 +11139,7 @@ Encoding: 111 111 59
 Width: 1024
 VWidth: 0
 Flags: HW
+AnchorPoint: "cedilla" 512 32 basechar 0
 AnchorPoint: "ogonek" 513 33 basechar 0
 AnchorPoint: "top" 512 912 basechar 0
 LayerCount: 2
@@ -11387,6 +11388,7 @@ Encoding: 108 108 64
 Width: 1024
 VWidth: 0
 Flags: HW
+AnchorPoint: "cedilla" 512 48 basechar 0
 AnchorPoint: "ogonek" 705 49 basechar 0
 AnchorPoint: "top" 512 1272 basechar 0
 LayerCount: 2
@@ -11423,6 +11425,7 @@ Encoding: 104 104 65
 Width: 1024
 VWidth: 0
 Flags: HW
+AnchorPoint: "cedilla" 512 48 basechar 0
 AnchorPoint: "ogonek" 769 49 basechar 0
 AnchorPoint: "top" 512 1272 basechar 0
 LayerCount: 2
@@ -11482,6 +11485,7 @@ Encoding: 101 101 66
 Width: 1024
 VWidth: 0
 Flags: HW
+AnchorPoint: "cedilla" 512 32 basechar 0
 AnchorPoint: "ogonek" 513 33 basechar 0
 AnchorPoint: "top" 512 912 basechar 0
 LayerCount: 2
@@ -11549,6 +11553,7 @@ Encoding: 110 110 68
 Width: 1024
 VWidth: 0
 Flags: HW
+AnchorPoint: "cedilla" 512 48 basechar 0
 AnchorPoint: "ogonek" 769 49 basechar 0
 AnchorPoint: "top" 512 912 basechar 0
 LayerCount: 2
@@ -11672,6 +11677,7 @@ Encoding: 107 107 71
 Width: 1024
 VWidth: 0
 Flags: HW
+AnchorPoint: "cedilla" 512 48 basechar 0
 AnchorPoint: "ogonek" 833 49 basechar 0
 AnchorPoint: "top" 512 1272 basechar 0
 LayerCount: 2
@@ -11736,6 +11742,7 @@ Encoding: 109 109 72
 Width: 1024
 VWidth: 0
 Flags: HW
+AnchorPoint: "cedilla" 512 48 basechar 0
 AnchorPoint: "ogonek" 849 49 basechar 0
 AnchorPoint: "top" 512 912 basechar 0
 LayerCount: 2
@@ -11815,6 +11822,7 @@ Encoding: 102 102 73
 Width: 1024
 VWidth: 0
 Flags: HW
+AnchorPoint: "cedilla" 416 48 basechar 0
 AnchorPoint: "ogonek" 577 49 basechar 0
 AnchorPoint: "top" 512 1272 basechar 0
 LayerCount: 2
@@ -11876,6 +11884,7 @@ Encoding: 103 103 74
 Width: 1024
 VWidth: 0
 Flags: HW
+AnchorPoint: "cedilla" 512 -352 basechar 0
 AnchorPoint: "ogonek" 513 -351 basechar 0
 AnchorPoint: "top" 512 912 basechar 0
 LayerCount: 2
@@ -12103,6 +12112,7 @@ Encoding: 100 100 78
 Width: 1024
 VWidth: 0
 Flags: HW
+AnchorPoint: "cedilla" 464 32 basechar 0
 AnchorPoint: "ogonek" 849 49 basechar 0
 AnchorPoint: "top" 512 1272 basechar 0
 LayerCount: 2
@@ -12152,6 +12162,7 @@ Encoding: 112 112 79
 Width: 1024
 VWidth: 0
 Flags: HW
+AnchorPoint: "cedilla" 560 32 basechar 0
 AnchorPoint: "ogonek" 561 33 basechar 0
 AnchorPoint: "top" 512 912 basechar 0
 LayerCount: 2
@@ -12204,6 +12215,7 @@ Encoding: 113 113 80
 Width: 1024
 VWidth: 0
 Flags: HW
+AnchorPoint: "cedilla" 464 32 basechar 0
 AnchorPoint: "ogonek" 769 -335 basechar 0
 AnchorPoint: "top" 512 912 basechar 0
 LayerCount: 2
@@ -12394,6 +12406,7 @@ Encoding: 99 99 84
 Width: 1024
 VWidth: 0
 Flags: HW
+AnchorPoint: "cedilla" 512 32 basechar 0
 AnchorPoint: "ogonek" 513 33 basechar 0
 AnchorPoint: "top" 512 912 basechar 0
 LayerCount: 2
@@ -12437,6 +12450,7 @@ Encoding: 98 98 85
 Width: 1024
 VWidth: 0
 Flags: HW
+AnchorPoint: "cedilla" 560 32 basechar 0
 AnchorPoint: "ogonek" 561 33 basechar 0
 AnchorPoint: "top" 512 1272 basechar 0
 LayerCount: 2
@@ -12496,6 +12510,7 @@ Encoding: 116 116 86
 Width: 1024
 VWidth: 0
 Flags: HW
+AnchorPoint: "cedilla" 576 16 basechar 0
 AnchorPoint: "ogonek" 577 17 basechar 0
 AnchorPoint: "top" 512 1272 basechar 0
 LayerCount: 2
@@ -12541,6 +12556,7 @@ Encoding: 67 67 87
 Width: 1024
 VWidth: 0
 Flags: HW
+AnchorPoint: "cedilla" 512 32 basechar 0
 AnchorPoint: "ogonek" 513 33 basechar 0
 AnchorPoint: "top" 512 1272 basechar 0
 LayerCount: 2
@@ -12650,6 +12666,7 @@ Encoding: 114 114 90
 Width: 1024
 VWidth: 0
 Flags: HW
+AnchorPoint: "cedilla" 416 48 basechar 0
 AnchorPoint: "ogonek" 513 49 basechar 0
 AnchorPoint: "top" 512 912 basechar 0
 LayerCount: 2
@@ -13045,6 +13062,7 @@ Encoding: 115 115 97
 Width: 1024
 VWidth: 0
 Flags: HW
+AnchorPoint: "cedilla" 512 32 basechar 0
 AnchorPoint: "ogonek" 513 33 basechar 0
 AnchorPoint: "top" 512 912 basechar 0
 LayerCount: 2
@@ -13100,6 +13118,7 @@ Encoding: 97 97 98
 Width: 1024
 VWidth: 0
 Flags: HW
+AnchorPoint: "cedilla" 432 32 basechar 0
 AnchorPoint: "ogonek" 849 49 basechar 0
 AnchorPoint: "top" 512 912 basechar 0
 LayerCount: 2
@@ -15441,7 +15460,7 @@ VWidth: 0
 Flags: H
 LayerCount: 2
 Fore
-Refer: 127 780 N 1 0 0 1 0 0 2
+Refer: 127 780 N 1 0 0 1 0 0.09 2
 Refer: 77 82 N 1 0 0 1 0 0 3
 EndChar
 
@@ -15452,7 +15471,7 @@ VWidth: 0
 Flags: H
 LayerCount: 2
 Fore
-Refer: 127 780 N 1 0 0 1 0 -360 2
+Refer: 127 780 N 1 0 0 1 0 -359.91 2
 Refer: 90 114 N 1 0 0 1 0 0 3
 EndChar
 
@@ -18673,6 +18692,8 @@ Encoding: 198 198 447
 Width: 1024
 VWidth: 0
 Flags: HW
+AnchorPoint: "top" 512 1272 basechar 0
+AnchorPoint: "ogonek" 768 48 basechar 0
 LayerCount: 2
 Back
 SplineSet
@@ -19205,6 +19226,7 @@ Encoding: 230 230 456
 Width: 1024
 VWidth: 0
 Flags: HW
+AnchorPoint: "ogonek" 696 32 basechar 0
 AnchorPoint: "top" 512 912 basechar 0
 LayerCount: 2
 Back
@@ -19275,7 +19297,6 @@ SplineSet
  464 432 l 1
  464 459.918403678 l 1
 EndSplineSet
-Validated: 1
 EndChar
 
 StartChar: ccedilla
@@ -24924,6 +24945,8 @@ Encoding: 339 339 583
 Width: 1024
 VWidth: 0
 Flags: HW
+AnchorPoint: "top" 512 912 basechar 0
+AnchorPoint: "ogonek" 696 32 basechar 0
 LayerCount: 2
 Back
 SplineSet
@@ -24976,6 +24999,8 @@ Encoding: 338 338 584
 Width: 1024
 VWidth: 0
 Flags: HW
+AnchorPoint: "top" 512 1272 basechar 0
+AnchorPoint: "ogonek" 696 48 basechar 0
 LayerCount: 2
 Back
 SplineSet
