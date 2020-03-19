@@ -22,7 +22,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 0
 CreationTime: 1582156054
-ModificationTime: 1584592338
+ModificationTime: 1584592405
 PfmFamily: 17
 TTFWeight: 400
 TTFWidth: 5
@@ -8570,6 +8570,7 @@ Encoding: 79 79 2
 Width: 1024
 VWidth: 0
 Flags: HW
+AnchorPoint: "ogonek" 513 33 basechar 0
 AnchorPoint: "top" 512 1272 basechar 0
 LayerCount: 2
 Back
@@ -9310,6 +9311,7 @@ Encoding: 85 85 25
 Width: 1024
 VWidth: 0
 Flags: HW
+AnchorPoint: "ogonek" 513 33 basechar 0
 AnchorPoint: "top" 512 1272 basechar 0
 LayerCount: 2
 Back
@@ -9524,6 +9526,7 @@ Encoding: 86 86 29
 Width: 1024
 VWidth: 0
 Flags: HW
+AnchorPoint: "ogonek" 513 49 basechar 0
 AnchorPoint: "top" 512 1272 basechar 0
 LayerCount: 2
 Back
@@ -9570,6 +9573,7 @@ Encoding: 89 89 30
 Width: 1024
 VWidth: 0
 Flags: HW
+AnchorPoint: "ogonek" 705 49 basechar 0
 AnchorPoint: "top" 512 1272 basechar 0
 LayerCount: 2
 Back
@@ -10313,6 +10317,7 @@ Encoding: 88 88 44
 Width: 1024
 VWidth: 0
 Flags: HW
+AnchorPoint: "ogonek" 817 49 basechar 0
 AnchorPoint: "top" 512 1272 basechar 0
 LayerCount: 2
 Back
@@ -10497,6 +10502,7 @@ Encoding: 87 87 47
 Width: 1024
 VWidth: 0
 Flags: HW
+AnchorPoint: "ogonek" 737 49 basechar 0
 AnchorPoint: "top" 512 1272 basechar 0
 LayerCount: 2
 Back
@@ -10557,6 +10563,7 @@ Encoding: 90 90 48
 Width: 1024
 VWidth: 0
 Flags: HW
+AnchorPoint: "ogonek" 769 49 basechar 0
 AnchorPoint: "top" 512 1272 basechar 0
 LayerCount: 2
 Back
@@ -10654,6 +10661,7 @@ Encoding: 84 84 50
 Width: 1024
 VWidth: 0
 Flags: HW
+AnchorPoint: "ogonek" 641 49 basechar 0
 AnchorPoint: "top" 512 1272 basechar 0
 LayerCount: 2
 Back
@@ -11968,6 +11976,7 @@ Encoding: 80 80 76
 Width: 1024
 VWidth: 0
 Flags: HW
+AnchorPoint: "ogonek" 449 49 basechar 0
 AnchorPoint: "top" 512 1272 basechar 0
 LayerCount: 2
 Back
@@ -12017,6 +12026,7 @@ Encoding: 82 82 77
 Width: 1024
 VWidth: 0
 Flags: HW
+AnchorPoint: "ogonek" 865 49 basechar 0
 AnchorPoint: "top" 512 1272 basechar 0
 LayerCount: 2
 Back
@@ -12312,6 +12322,7 @@ Encoding: 81 81 83
 Width: 1024
 VWidth: 0
 Flags: HW
+AnchorPoint: "ogonek" 769 -239 basechar 0
 AnchorPoint: "top" 512 1272 basechar 0
 LayerCount: 2
 Back
@@ -12962,6 +12973,7 @@ Encoding: 83 83 96
 Width: 1024
 VWidth: 0
 Flags: HW
+AnchorPoint: "ogonek" 513 33 basechar 0
 AnchorPoint: "top" 512 1272 basechar 0
 LayerCount: 2
 Back
