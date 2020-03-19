@@ -54,6 +54,13 @@ Reproducing Typewriter).
 
 -   This is most definitely a work in progress.
 
+## Variants
+
+-   `dse-typewriter-font.ttf` is the base variant.
+
+-   `dse-typewriter-font-lh.ttf` adds metrics based on a 1.2-em line
+    height.
+
 ## See Also
 
 See <https://github.com/dse/dse-typewriter-bitmap-font/> for DSE
