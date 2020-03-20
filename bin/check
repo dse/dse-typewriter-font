@@ -11,7 +11,7 @@ while (<>) {
     s{\R\z}{};
     if (m{^\s*startchar:\s*(.*?)\s*$}i) {
         if (defined $char) {
-            processChar();
+            checkChar();
         }
         $char = {
             charName => $1,
@@ -40,7 +40,7 @@ while (<>) {
             }
         } elsif (m{^\s*endchar\s*$}i) {
             push(@{$char->{lines}}, $_);
-            processChar();
+            checkChar();
             $char = undef;
         } elsif (m{^\s*back\s*$}i) {
             push(@{$char->{lines}}, $_);
@@ -79,9 +79,9 @@ while (<>) {
 }
 eof:
 
-processChar();
+checkChar();
 
-sub processChar {
+sub checkChar {
     if (defined $char) {
         my $back = $char->{back};
         my $fore = $char->{fore};
