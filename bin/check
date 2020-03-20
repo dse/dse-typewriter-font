@@ -24,6 +24,9 @@ while (<>) {
         if (m{^\s*encoding:(?:\s+(\d+))?(?:\s+(\d+))?(?:\s+(\d+))?\s*$}i) {
             push(@{$char->{lines}}, $_);
             my @encoding = ($1, $2, $3);
+            # first in the current font,
+            #     then in unicode,
+            #     and finally the original position (GID)
             $char->{encoding} = \@encoding;
             $char->{toString} .= sprintf(' (%d %d %d)', @encoding);
         } elsif (m{^\s*width:\s*(\d+)\s*$}i) {
@@ -82,6 +85,7 @@ sub processChar {
     if (defined $char) {
         my $back = $char->{back};
         my $fore = $char->{fore};
+        my $codepoint = $char->{encoding}->[1];
         if (defined $fore && defined $back) {
             if ($fore->{splinesetCount} && $back->{splinesetCount} &&
                     !$back->{referenceCount} && !$fore->{referenceCount}) {
@@ -99,6 +103,9 @@ sub processChar {
         }
         if (defined $fore && !defined $back) {
             if ($fore->{splinesetCount} && !$fore->{referenceCount}) {
+                if ($codepoint >= 9600 && $codepoint < 9632) {
+                    return;
+                }
                 printf("BBB %s: needs to be converted to Back layer with stroke\n",
                        $char->{toString});
                 return;
