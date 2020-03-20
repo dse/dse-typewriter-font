@@ -29859,7 +29859,7 @@ EndChar
 
 StartChar: uni01DD
 Encoding: 477 477 727
-Width: 2048
+Width: 1024
 VWidth: 0
 Flags: HW
 AnchorPoint: "top" 512 912 basechar 0
@@ -29900,7 +29900,7 @@ EndChar
 
 StartChar: uni0259
 Encoding: 601 601 728
-Width: 2048
+Width: 1024
 VWidth: 0
 Flags: H
 AnchorPoint: "top" 512 912 basechar 0
@@ -30219,7 +30219,7 @@ EndChar
 
 StartChar: uni2045
 Encoding: 8261 8261 733
-Width: 2048
+Width: 1024
 VWidth: 0
 Flags: HW
 LayerCount: 2
@@ -30258,7 +30258,7 @@ EndChar
 
 StartChar: uni2046
 Encoding: 8262 8262 734
-Width: 2048
+Width: 1024
 VWidth: 0
 Flags: HW
 LayerCount: 2
