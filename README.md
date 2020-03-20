@@ -75,6 +75,10 @@ environments that support it, and there is a `.ttf` version.
 
 ## Preview
 
+![Sample (Mac)](images/sample-mac.png)
+
 ![Sample (Windows)](images/sample-windows.png)
+
+![Coding (Mac)](images/coding-mac.png)
 
 ![Coding (Windows)](images/coding-windows.png)
