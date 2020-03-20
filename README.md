@@ -75,6 +75,6 @@ environments that support it, and there is a `.ttf` version.
 
 ## Preview
 
-![Coding](images/2020-02-27-coding-2.png)
+![Sample (Windows)](images/sample-windows.png)
 
-![Demo](images/2020-02-27-ascii-2.png)
+![Coding (Windows)](images/coding-windows.png)
