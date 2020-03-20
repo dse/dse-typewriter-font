@@ -13,6 +13,13 @@ TTFS = $(TTF) $(TTF_LH) $(TTF__NH) $(TTF__AH)
 VERSION = $(shell date +"%Y.%m.%d")
 SFNT_REVISION = $(shell date +"%Y%m.%d")
 
+TTFAUTOHINT = ttfautohint \
+	--fallback-stem-width=96 \
+	--detailed-info \
+	--windows-compatibility \
+	--ignore-restrictions \
+	--verbose
+
 default: $(TTFS)
 
 %.ttf: %.sfd Makefile
@@ -51,18 +58,20 @@ testing/%--nh.ttf: %.sfd Makefile
 
 testing/%--ah.ttf: testing/%--nh.ttf Makefile
 	mkdir -p testing
-	ttfautohint $< $@.tmp.ttf
 	ffscript \
 		--font-name='DSETypewriterAH' \
 		--family-name='DSE Typewriter AH' \
 		--full-name='DSE Typewriter AH' \
-		$@.tmp.ttf $@.tmp.ttf
+		$< $@.tmp.ttf
+	$(TTFAUTOHINT) $@.tmp.ttf - | sponge $@.tmp.ttf
 	mv $@.tmp.ttf $@
 
 macedit:
 	/Applications/FontForge.app/Contents/Resources/opt/local/bin/fontforge "$$(realpath $(SRC))"
 maceditttf:
 	/Applications/FontForge.app/Contents/Resources/opt/local/bin/fontforge "$$(realpath $(TTF))"
+maceditttfah:
+	/Applications/FontForge.app/Contents/Resources/opt/local/bin/fontforge "$$(realpath $(TTF__AH))"
 
 clean:
 	rm -f $(TTFS) *~ '#'*'#'
