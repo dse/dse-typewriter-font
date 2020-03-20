@@ -16,6 +16,7 @@ SFNT_REVISION = $(shell date +"%Y%m.%d")
 default: $(TTFS)
 
 %.ttf: %.sfd Makefile
+	bin/check $(SRC)
 	ffscript \
 		--encode-unicode \
 		--version="$(VERSION)" \
@@ -23,6 +24,7 @@ default: $(TTFS)
 	mv $@.tmp.ttf $@
 
 %-lh.ttf: %.sfd Makefile
+	bin/check $(SRC)
 	ffscript \
 		--encode-unicode \
 		--version="$(VERSION)" \
@@ -34,6 +36,7 @@ default: $(TTFS)
 	mv $@.tmp.ttf $@
 
 testing/%--nh.ttf: %.sfd Makefile
+	bin/check $(SRC)
 	mkdir -p testing
 	ffscript \
 		--encode-unicode \
