@@ -5,6 +5,7 @@ use v5.10.0;
 
 my $char;
 my $layer;
+my $ok = 1;
 
 line:
 while (<>) {
@@ -81,6 +82,8 @@ eof:
 
 checkChar();
 
+exit(!$ok);
+
 sub checkChar {
     if (defined $char) {
         my $back = $char->{back};
@@ -95,6 +98,7 @@ sub checkChar {
                     && $fore->{splinesetCount} && !$fore->{referenceCount}) {
                 printf("RRR %s: references should be moved to Fore layer\n",
                        $char->{toString});
+                $ok = 0;
                 return;
             }
         }
@@ -108,6 +112,7 @@ sub checkChar {
                 }
                 printf("BBB %s: needs to be converted to Back layer with stroke\n",
                        $char->{toString});
+                $ok = 0;
                 return;
             }
             if ($fore->{referenceCount} && !$fore->{splinesetCount}) {
