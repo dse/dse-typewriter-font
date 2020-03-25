@@ -35404,7 +35404,7 @@ EndChar
 
 StartChar: uni044A
 Encoding: 1098 1098 843
-Width: 2048
+Width: 1024
 VWidth: 0
 Flags: HW
 LayerCount: 2
@@ -35457,7 +35457,7 @@ EndChar
 
 StartChar: uni044B
 Encoding: 1099 1099 844
-Width: 2048
+Width: 1024
 VWidth: 0
 Flags: HW
 LayerCount: 2
@@ -35526,7 +35526,7 @@ EndChar
 
 StartChar: uni044C
 Encoding: 1100 1100 845
-Width: 2048
+Width: 1024
 VWidth: 0
 Flags: HW
 LayerCount: 2
@@ -35572,7 +35572,7 @@ EndChar
 
 StartChar: uni044D
 Encoding: 1101 1101 846
-Width: 2048
+Width: 1024
 VWidth: 0
 Flags: H
 LayerCount: 2
@@ -35625,7 +35625,7 @@ EndChar
 
 StartChar: uni044E
 Encoding: 1102 1102 847
-Width: 2048
+Width: 1024
 VWidth: 0
 Flags: H
 LayerCount: 2
@@ -35686,7 +35686,7 @@ EndChar
 
 StartChar: uni044F
 Encoding: 1103 1103 848
-Width: 2048
+Width: 1024
 VWidth: 0
 Flags: H
 AnchorPoint: "top" 512 1272 basechar 0
@@ -35749,7 +35749,7 @@ EndChar
 
 StartChar: uni0454
 Encoding: 1108 1108 849
-Width: 2048
+Width: 1024
 VWidth: 0
 Flags: HW
 LayerCount: 2
