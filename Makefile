@@ -14,6 +14,8 @@ VERSION = $(shell date +"%Y.%m.%d")
 SFNT_REVISION = $(shell date +"%Y%m.%d")
 
 TTFAUTOHINT = ttfautohint \
+	--hinting-range-min=2 \
+	--hinting-limit=50 \
 	--fallback-stem-width=96 \
 	--detailed-info \
 	--windows-compatibility \
@@ -63,8 +65,8 @@ testing/%--ah.ttf: testing/%--nh.ttf Makefile
 		--family-name='DSE Typewriter AH' \
 		--full-name='DSE Typewriter AH' \
 		$< $@.tmp.ttf
-	$(TTFAUTOHINT) $@.tmp.ttf - | sponge $@.tmp.ttf
-	mv $@.tmp.ttf $@
+	$(TTFAUTOHINT) $@.tmp.ttf $@
+	rm $@.tmp.ttf
 
 macedit:
 	/Applications/FontForge.app/Contents/Resources/opt/local/bin/fontforge "$$(realpath $(SRC))"
