@@ -1,8 +1,8 @@
-SRC = dse-typewriter-font.sfd
-TTF = dse-typewriter-font.ttf
+SRC = src/dse-typewriter-font.sfd
+TTF = ttf/dse-typewriter-font.ttf
 
 # 1.2 line height variant
-TTF_LH = dse-typewriter-font-lh.ttf
+TTF_LH = ttf/dse-typewriter-font-lh.ttf
 
 # nohint and autohint variants
 TTF__NH = testing/dse-typewriter-font--nh.ttf
@@ -24,7 +24,7 @@ TTFAUTOHINT = ttfautohint \
 
 default: $(TTFS)
 
-%.ttf: %.sfd Makefile
+ttf/%.ttf: src/%.sfd Makefile
 	bin/check $(SRC)
 	ffscript \
 		--encode-unicode \
@@ -32,7 +32,7 @@ default: $(TTFS)
 		$< $@.tmp.ttf
 	mv $@.tmp.ttf $@
 
-%-lh.ttf: %.sfd Makefile
+ttf/%-lh.ttf: src/%.sfd Makefile
 	bin/check $(SRC)
 	ffscript \
 		--encode-unicode \
@@ -44,7 +44,7 @@ default: $(TTFS)
 		$< $@.tmp.ttf
 	mv $@.tmp.ttf $@
 
-testing/%--nh.ttf: %.sfd Makefile
+testing/%--nh.ttf: src/%.sfd Makefile
 	bin/check $(SRC)
 	mkdir -p testing
 	ffscript \
