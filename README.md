@@ -2,6 +2,8 @@
 
 <https://webonastick.com/fonts/dse-typewriter/>
 
+![Printed Example](images/dse-typewriter-printed.png)
+
 A project to create a coding font inspired by early 20th-century
 typewriters.
 
