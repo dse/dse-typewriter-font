@@ -1,0 +1,184 @@
+@font-face {
+    font-family: 'DSE Typewriter';
+    src: url('../ttf/dse-typewriter-font.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'DSE Typewriter LH';
+    src: url('../ttf/dse-typewriter-font-lh.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html {
+    font-family: 'DSE Typewriter';
+    line-height: 1.0;
+    margin: 0;
+    padding: 0;
+}
+@media (min-width: 600px) {
+    html {
+        font-size: 18px;
+    }
+}
+code {
+    font-family: 'DSE Typewriter';
+}
+pre {
+    font-family: 'DSE Typewriter';
+    overflow-x: auto;
+    background-color: #eee;
+    padding: 0.5rem 2ch;
+    box-sizing: border-box;
+}
+body {
+    margin: 0 auto;
+    padding: 1rem;
+    max-width: 960px;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+}
+h1 {
+    font-size: 200%;
+    color: red;
+    text-decoration: underline;
+}
+h2 {
+    font-size: 200%;
+    color: red;
+}
+h3 {
+    font-size: 200%;
+}
+h4 {
+    font-size: 100%;
+    text-decoration: underline;
+}
+h5 {
+    font-size: 100%;
+    text-decoration: underline;
+}
+h6 {
+    font-size: 100%;
+    text-decoration: underline;
+}
+h1, h2, h3, h4, h5, h6, ul, ol, dl, p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+textarea.textarea-font-trial-text {
+    width: 100%;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    box-sizing: border-box;
+}
+.font-trial-text {
+    transition: font-size 0.25s;
+}
+ul.typewriter {
+    list-style: none;
+    margin-left: 2ch;
+    padding-left: 0;
+}
+ul.typewriter > li {
+    position: relative;
+}
+ul.typewriter > li::before {
+    position: absolute;
+    top: 0;
+    left: -2ch;
+    content: '*';
+}
+
+
+* {
+    /* auto|optimizeSpeed|optimizeLegibility|geometricPrecision */
+    text-rendering: geometricPrecision;
+
+    /* auto|never|always|<length> */
+    font-smooth: auto;
+
+    /* auto|none|antialiased|subpixel-antialiased */
+    -webkit-font-smoothing: antialiased;
+
+    /* auto|grayscale */
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* foundation/bootstrap-ish */
+.row {
+    margin-left: -1rem;
+    margin-right: -1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: flex-start;
+    box-sizing: border-box;
+}
+.row > .columns {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    min-height: 1px;
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+}
+.row::after {
+    display: table;
+    content: ' ';
+    clear: both;
+    box-sizing: border-box;
+}
+.row::before {
+    display: table;
+    content: ' ';
+    box-sizing: border-box;
+}
+.row > .small-1  { width: calc(100% * 1/12); }
+.row > .small-2  { width: calc(100% * 2/12); }
+.row > .small-3  { width: calc(100% * 3/12); }
+.row > .small-4  { width: calc(100% * 4/12); }
+.row > .small-5  { width: calc(100% * 5/12); }
+.row > .small-6  { width: calc(100% * 6/12); }
+.row > .small-7  { width: calc(100% * 7/12); }
+.row > .small-8  { width: calc(100% * 8/12); }
+.row > .small-9  { width: calc(100% * 9/12); }
+.row > .small-10 { width: calc(100% * 10/12); }
+.row > .small-11 { width: calc(100% * 11/12); }
+.row > .small-12 { width: calc(100% * 12/12); }
+@media (min-width: 600px) {
+    .row > .medium-1  { width: calc(100% * 1/12); }
+    .row > .medium-2  { width: calc(100% * 2/12); }
+    .row > .medium-3  { width: calc(100% * 3/12); }
+    .row > .medium-4  { width: calc(100% * 4/12); }
+    .row > .medium-5  { width: calc(100% * 5/12); }
+    .row > .medium-6  { width: calc(100% * 6/12); }
+    .row > .medium-7  { width: calc(100% * 7/12); }
+    .row > .medium-8  { width: calc(100% * 8/12); }
+    .row > .medium-9  { width: calc(100% * 9/12); }
+    .row > .medium-10 { width: calc(100% * 10/12); }
+    .row > .medium-11 { width: calc(100% * 11/12); }
+    .row > .medium-12 { width: calc(100% * 12/12); }
+}
+@media (min-width: 960px) {
+    .row > .large-1  { width: calc(100% * 1/12); }
+    .row > .large-2  { width: calc(100% * 2/12); }
+    .row > .large-3  { width: calc(100% * 3/12); }
+    .row > .large-4  { width: calc(100% * 4/12); }
+    .row > .large-5  { width: calc(100% * 5/12); }
+    .row > .large-6  { width: calc(100% * 6/12); }
+    .row > .large-7  { width: calc(100% * 7/12); }
+    .row > .large-8  { width: calc(100% * 8/12); }
+    .row > .large-9  { width: calc(100% * 9/12); }
+    .row > .large-10 { width: calc(100% * 10/12); }
+    .row > .large-11 { width: calc(100% * 11/12); }
+    .row > .large-12 { width: calc(100% * 12/12); }
+}
+.row img {
+    display: inline-block;
+    max-width: 100%;
+}
