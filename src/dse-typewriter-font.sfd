@@ -36066,7 +36066,7 @@ EndChar
 
 StartChar: circumflex
 Encoding: 710 710 857
-Width: 2048
+Width: 1024
 Flags: H
 AnchorPoint: "top" 512 1272 mark 0
 LayerCount: 2
@@ -36336,7 +36336,7 @@ EndChar
 
 StartChar: uni2201
 Encoding: 8705 8705 863
-Width: 2048
+Width: 1024
 Flags: H
 LayerCount: 2
 Back
@@ -36736,7 +36736,7 @@ EndChar
 
 StartChar: partialdiff
 Encoding: 8706 8706 872
-Width: 2048
+Width: 1024
 Flags: H
 LayerCount: 2
 Back
