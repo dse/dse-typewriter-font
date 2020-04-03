@@ -32,6 +32,13 @@ def updateGlyph(font, glyph):
         glyph.activeLayer = 'Fore'
         anchorPoints = glyph.anchorPoints
 
+        # save foreground references, for glyphs combining
+        # foreground-layer references and background-layer strokes
+        references = glyph.layerrefs[1]
+        print("references: %r" % (references,))
+        for reference in references:
+            print("    reference: %r" % (reference,))
+
         copyLayer(glyph, src = 'Back', dest = 'Fore')
 
         strokeWidth = 96
@@ -66,6 +73,9 @@ def updateGlyph(font, glyph):
         glyph.activeLayer = 'Fore'
         for anchorPoint in anchorPoints:
             glyph.addAnchorPoint(*anchorPoint)
+
+        for reference in references:
+            glyph.addReference(reference[0], reference[1])
 
 activeFont = fontforge.activeFont()
 
