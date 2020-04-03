@@ -101,6 +101,10 @@ sub checkChar {
                 $ok = 0;
                 return;
             }
+            if ($fore->{referenceCount} && $back->{splinesetCount}) {
+                # contains both references and background-layer splines
+                return;
+            }
         }
         if (!defined $fore && !defined $back) {
             return;
