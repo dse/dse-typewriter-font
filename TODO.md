@@ -5,8 +5,4 @@
 
 -   ogonek
 
--   delete U+21EE
-
--   delete U+2201
-
 -   heavy box drawing characters need to be twice as heavy
