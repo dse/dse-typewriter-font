@@ -36,6 +36,18 @@ Reproducing Typewriter).
 -   Full ASCII and Latin-1 coverage, along with selected extended
     Latin, punctuation, graphic, and currency symbols.
 
+    Includes every character you can type in the US International
+    Layout in Windows.
+
+    Includes every character you can type on a Mac when the input
+    source is U.S.
+
+    Includes all box drawing characters.
+
+    Supports most western European languages.
+
+    Includes basic Cyrillic.
+
 -   Coding-friendly distinctive characters: `li1|` `Oo0` `` `'" ``
 
 -   Elite scale typeface (12 characters per inch at 12-point font
