@@ -26,7 +26,39 @@ def updateGlyph(font, glyph):
     clip = False
 
     if not bg.isEmpty():
-        width = glyph.width
+        savedWidth = glyph.width
+
+        # make heavy box drawing character segments heavier
+        middleX = int(0.5 + 1.0 * glyph.width / 2)
+        middleY = int(0.5 + 1.0 * (font.ascent - abs(font.descent)) / 2)
+        backLayer = glyph.layers['Back']
+        if (glyph.unicode >= 0x2500 and glyph.unicode <= 0x254f) or (glyph.unicode >= 0x2574 and glyph.unicode <= 0x257f):
+            modifyBackLayer = False
+            contours = []
+            newContours = []
+            for contour in backLayer:
+                contours += [contour]
+                newContour = fontforge.contour()
+                for point in contour:
+                    if point.x == middleX - 48:
+                        modifyBackLayer = True
+                        point.x = middleX - 96
+                    if point.x == middleX + 48:
+                        modifyBackLayer = True
+                        point.x = middleX + 96
+                    if point.y == middleY - 48:
+                        modifyBackLayer = True
+                        point.y = middleY - 96
+                    if point.y == middleY + 48:
+                        modifyBackLayer = True
+                        point.y = middleY + 96
+                    newContour += point
+                newContours += [newContour]
+            if modifyBackLayer:
+                glyph.layers['Back'] = fontforge.layer()
+                for contour in newContours:
+                    glyph.layers['Back'] += contour
+                backLayer = glyph.layers['Back']
 
         # save anchor points
         glyph.activeLayer = 'Fore'
@@ -43,8 +75,7 @@ def updateGlyph(font, glyph):
 
         strokeWidth = 96
 
-        if (glyph.unicode >= 0x2500 and glyph.unicode < 0x2600 and
-            not (glyph.unicode >= 0x2571 and glyph.unicode <= 0x2573)):
+        if (glyph.unicode >= 0x2500 and glyph.unicode < 0x2600 and not (glyph.unicode >= 0x2571 and glyph.unicode <= 0x2573)):
             # Box Drawing Characters
             lineCap = 'butt'
             lineJoin = 'round'
@@ -55,7 +86,7 @@ def updateGlyph(font, glyph):
         glyph.activeLayer = 'Fore'
         glyph.stroke('circular', strokeWidth, lineCap, lineJoin)
         glyph.removeOverlap()
-        glyph.width = width
+        glyph.width = savedWidth
 
         if clip:
             clipContour = fontforge.contour()
