@@ -72,13 +72,14 @@ glyphs.inc.html: $(SRC) Makefile
 	ffglyphs --list-blocks --class="glyphs" --format=html $(SRC) >$@
 glyphs.html: glyphs.inc.html glyphs.ssi.html Makefile
 	ssi glyphs.ssi.html >$@
-
 macedit:
 	/Applications/FontForge.app/Contents/Resources/opt/local/bin/fontforge "$$(realpath $(SRC))"
 maceditttf:
 	/Applications/FontForge.app/Contents/Resources/opt/local/bin/fontforge "$$(realpath $(TTF))"
 maceditttfah:
 	/Applications/FontForge.app/Contents/Resources/opt/local/bin/fontforge "$$(realpath $(TTF__AH))"
+publish:
+	ssh dse@webonastick.com "bash -c 'cd /www/webonastick.com/htdocs/fonts/dse-typewriter && git pull'"
 
 clean:
 	rm -f $(TTFS) *~ '#'*'#'

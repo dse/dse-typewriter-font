@@ -183,6 +183,9 @@ p    .row > .medium-11 { width: calc(100% * 11/12); }
     max-width: 100%;
 }
 table {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    border-collapse: collapse;
 }
 table > * > * > td,
 table > * > * > th {
@@ -205,7 +208,16 @@ table > * > * > th {
 .breadcrumbs ul > li + li::before {
     content: '>';
 }
-table {
-    margin-top: 0;
-    margin-bottom: 1rem;
+
+table.glyphs {
+    font-size: 200%;
+    margin-left: 2ch;
+}
+table.glyphs th {
+    font-weight: normal;
+    text-decoration: underline;
+    vertical-align: bottom;
+}
+table.glyphs td {
+    vertical-align: baseline;
 }
