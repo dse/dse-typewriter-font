@@ -68,6 +68,11 @@ testing/%--ah.ttf: testing/%--nh.ttf Makefile
 	$(TTFAUTOHINT) $@.tmp.ttf $@
 	rm $@.tmp.ttf
 
+glyphs.inc.html: $(SRC) Makefile
+	ffglyphs --list-blocks --class="glyphs" --format=html $(SRC) >$@
+glyphs.html: glyphs.inc.html glyphs.ssi.html Makefile
+	ssi glyphs.ssi.html >$@
+
 macedit:
 	/Applications/FontForge.app/Contents/Resources/opt/local/bin/fontforge "$$(realpath $(SRC))"
 maceditttf:
