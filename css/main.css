@@ -161,7 +161,7 @@ ul.typewriter > li::before {
     .row > .medium-8  { width: calc(100% * 8/12); }
     .row > .medium-9  { width: calc(100% * 9/12); }
     .row > .medium-10 { width: calc(100% * 10/12); }
-    .row > .medium-11 { width: calc(100% * 11/12); }
+p    .row > .medium-11 { width: calc(100% * 11/12); }
     .row > .medium-12 { width: calc(100% * 12/12); }
 }
 @media (min-width: 960px) {
@@ -181,4 +181,31 @@ ul.typewriter > li::before {
 .row img {
     display: inline-block;
     max-width: 100%;
+}
+table {
+}
+table > * > * > td,
+table > * > * > th {
+    padding: 0 1ch 0 0;
+}
+table > * > * > th {
+    text-align: left;
+}
+.breadcrumbs {
+    border-bottom: 1px solid black; margin-bottom: 1rem;
+}
+.breadcrumbs ul {
+    list-style: none;
+    padding-left: 0;
+}
+.breadcrumbs ul > li {
+    display: inline-block;
+    margin-bottom: 0;
+}
+.breadcrumbs ul > li + li::before {
+    content: '>';
+}
+table {
+    margin-top: 0;
+    margin-bottom: 1rem;
 }
