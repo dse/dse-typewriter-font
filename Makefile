@@ -70,6 +70,8 @@ testing/%--ah.ttf: testing/%--nh.ttf Makefile
 
 glyphs.inc.html: $(SRC) Makefile
 	ffglyphs --list-blocks --class="glyphs" --format=html $(SRC) >$@
+glyphs.txt: $(SRC) Makefile
+	ffglyphs --list-blocks $(SRC) >$@
 glyphs.html: glyphs.inc.html glyphs.ssi.html Makefile
 	ssi glyphs.ssi.html >$@
 macedit:
