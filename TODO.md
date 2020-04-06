@@ -4,5 +4,3 @@
     with the cedilla
 
 -   ogonek
-
--   heavy box drawing characters need to be twice as heavy
