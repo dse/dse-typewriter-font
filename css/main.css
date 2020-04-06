@@ -1,12 +1,12 @@
 @font-face {
     font-family: 'DSE Typewriter web font';
-    src: url('../ttf/dse-typewriter-font.ttf');
+    src: url('../ttf/dse-typewriter-font.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
     font-family: 'DSE Typewriter LH web font';
-    src: url('../ttf/dse-typewriter-font-lh.ttf');
+    src: url('../ttf/dse-typewriter-font-lh.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
