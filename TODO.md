@@ -5,6 +5,17 @@
 
 -   ogonek
 
+-   stylistic sets:
+
+    -   `ss01` slashed zero
+    -   `ss02` plain zero
+    -   slashed zero, oldstyle
+    -   plain zero, oldstyle
+    -   make single vertical bar dollar sign the default
+    -   make double vertical bar dollar sign stylistic set `ss03`
+
+# OLD STUFF
+
 ## Glyph Substitutions
 
 (example from Consolas)
