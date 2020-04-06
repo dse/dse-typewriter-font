@@ -161,7 +161,7 @@ ul.typewriter > li::before {
     .row > .medium-8  { width: calc(100% * 8/12); }
     .row > .medium-9  { width: calc(100% * 9/12); }
     .row > .medium-10 { width: calc(100% * 10/12); }
-p    .row > .medium-11 { width: calc(100% * 11/12); }
+    .row > .medium-11 { width: calc(100% * 11/12); }
     .row > .medium-12 { width: calc(100% * 12/12); }
 }
 @media (min-width: 960px) {
