@@ -1,18 +1,18 @@
 @font-face {
-    font-family: 'DSE Typewriter';
+    font-family: 'DSE Typewriter web font';
     src: url('../ttf/dse-typewriter-font.ttf');
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
-    font-family: 'DSE Typewriter LH';
+    font-family: 'DSE Typewriter LH web font';
     src: url('../ttf/dse-typewriter-font-lh.ttf');
     font-weight: normal;
     font-style: normal;
 }
 
 html {
-    font-family: 'DSE Typewriter';
+    font-family: 'DSE Typewriter web font';
     line-height: 1.0;
     margin: 0;
     padding: 0;
@@ -23,10 +23,10 @@ html {
     }
 }
 code {
-    font-family: 'DSE Typewriter';
+    font-family: 'DSE Typewriter web font';
 }
 pre {
-    font-family: 'DSE Typewriter';
+    font-family: 'DSE Typewriter web font';
     overflow-x: auto;
     background-color: #eee;
     padding: 0.5rem 2ch;
@@ -220,4 +220,14 @@ table.glyphs th {
 }
 table.glyphs td {
     vertical-align: baseline;
+}
+
+.old-style-numerals {
+    font-feature-settings: "onum" 1;
+}
+@supports (font-variant-numeric: oldstyle-nums) {
+    .old-style-numerals {
+        font-feature-settings: normal;
+        font-variant-numeric: oldstyle-nums;
+    }
 }
