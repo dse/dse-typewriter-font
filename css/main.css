@@ -209,8 +209,10 @@ table > * > * > th {
     content: '>';
 }
 
-table.glyphs {
-    margin-left: 4ch;
+@media (min-width: 600px) {
+    table.glyphs {
+        margin-left: 4ch;
+    }
 }
 @media (min-width: 960px) {
     table.glyphs {
