@@ -210,8 +210,12 @@ table > * > * > th {
 }
 
 table.glyphs {
-    font-size: 200%;
-    margin-left: 2ch;
+    margin-left: 4ch;
+}
+@media (min-width: 960px) {
+    table.glyphs {
+        font-size: 200%;
+    }
 }
 table.glyphs th {
     font-weight: normal;
