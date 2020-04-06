@@ -22,7 +22,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 0
 CreationTime: 1582156054
-ModificationTime: 1586203845
+ModificationTime: 1586205371
 PfmFamily: 17
 TTFWeight: 400
 TTFWidth: 5
@@ -45,6 +45,7 @@ HheadDOffset: 0
 OS2CapHeight: 1248
 OS2XHeight: 864
 OS2Vendor: 'PfEd'
+Lookup: 1 0 0 "'onum' Oldstyle Figures lookup 16" { "'onum' Oldstyle Figures lookup 16 subtable" ("oldstyle") } ['onum' ('cyrl' <'SRB ' 'dflt' > 'grek' <'dflt' > 'latn' <'IPPH' 'ROM ' 'TRK ' 'dflt' > ) ]
 MarkAttachClasses: 1
 DEI: 91125
 LangName: 1033
@@ -54,7 +55,7 @@ NameList: AGL For New Fonts
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 65408 16 9
+WinInfo: 0 16 9
 BeginPrivate: 0
 EndPrivate
 Grid
@@ -8570,7 +8571,9 @@ StartChar: O
 Encoding: 79 79 2
 Width: 1024
 VWidth: 0
-Flags: HW
+Flags: W
+HStem: -16 96<381.793 642.207> 1168 96<381.793 642.207>
+VStem: 96 96<342.866 905.134> 832 96<342.866 905.134>
 AnchorPoint: "cedilla" 512 32 basechar 0
 AnchorPoint: "ogonek" 513 33 basechar 0
 AnchorPoint: "top" 512 1272 basechar 0
@@ -8602,7 +8605,9 @@ StartChar: I
 Encoding: 73 73 3
 Width: 1024
 VWidth: 0
-Flags: HW
+Flags: W
+HStem: 0 96<160.142 464 560 863.858> 1152 96<160.142 464 560 863.858>
+VStem: 464 96<96 1152>
 AnchorPoint: "cedilla" 512 48 basechar 0
 AnchorPoint: "ogonek" 705 49 basechar 0
 AnchorPoint: "top" 512 1272 basechar 0
@@ -8767,7 +8772,9 @@ StartChar: one
 Encoding: 49 49 9
 Width: 1024
 VWidth: 0
-Flags: HW
+Flags: W
+HStem: 0 96<160.142 464 560 863.858> 944 96<160.142 329.494> 1228 20G<511.301 524.888>
+VStem: 464 96<96 1066>
 LayerCount: 2
 Back
 SplineSet
@@ -8797,6 +8804,7 @@ SplineSet
  208 0 l 2
  181.853633925 0 160 21.8555282921 160 48 c 0
 EndSplineSet
+Substitution2: "'onum' Oldstyle Figures lookup 16 subtable" one.oldstyle
 EndChar
 
 StartChar: backslash
@@ -8955,6 +8963,7 @@ SplineSet
  832 943.78929021 669.768153932 1168 512 1168 c 0
  354.232033333 1168 192 943.788782471 192 624 c 0
 EndSplineSet
+Substitution2: "'onum' Oldstyle Figures lookup 16 subtable" zero.oldstyle
 EndChar
 
 StartChar: comma
@@ -9219,6 +9228,7 @@ SplineSet
  360.883550597 1168 248 1061.86596156 248 944 c 0
  248 826.13414687 360.883616445 720 512 720 c 0
 EndSplineSet
+Substitution2: "'onum' Oldstyle Figures lookup 16 subtable" eight.oldstyle
 EndChar
 
 StartChar: greater
@@ -11005,6 +11015,7 @@ SplineSet
  288 240.958444981 253.84506275 201.621495232 209.0718677 193.525680799 c 1
  248.87030562 136.990358302 356.393244549 80 512 80 c 0
 EndSplineSet
+Substitution2: "'onum' Oldstyle Figures lookup 16 subtable" three.oldstyle
 EndChar
 
 StartChar: four
@@ -11051,6 +11062,7 @@ SplineSet
  208.427044916 528 l 1
  608 528 l 1
 EndSplineSet
+Substitution2: "'onum' Oldstyle Figures lookup 16 subtable" four.oldstyle
 EndChar
 
 StartChar: seven
@@ -11112,6 +11124,7 @@ SplineSet
  462.907592078 1140.33669981 448.955944895 1151.41897687 432.900379588 1158.53911899 c 0
  420.051457503 1164.23721492 405.086453387 1168 384 1168 c 0
 EndSplineSet
+Substitution2: "'onum' Oldstyle Figures lookup 16 subtable" seven.oldstyle
 EndChar
 
 StartChar: B
@@ -11175,7 +11188,9 @@ StartChar: o
 Encoding: 111 111 59
 Width: 1024
 VWidth: 0
-Flags: HW
+Flags: W
+HStem: -16 96<359.622 664.378> 784 96<359.622 664.378>
+VStem: 96 96<257.128 606.872> 832 96<257.128 606.872>
 AnchorPoint: "cedilla" 512 32 basechar 0
 AnchorPoint: "ogonek" 513 33 basechar 0
 AnchorPoint: "top" 512 912 basechar 0
@@ -11300,7 +11315,8 @@ StartChar: x
 Encoding: 120 120 62
 Width: 1024
 VWidth: 0
-Flags: HW
+Flags: W
+HStem: 0 96<32.1423 172.139 295.34 447.858 576.142 728.66 851.861 991.858> 768 96<48.1422 188.139 311.34 463.858 560.142 712.66 835.861 975.858>
 AnchorPoint: "cedilla" 512 48 basechar 0
 AnchorPoint: "ogonek" 817 49 basechar 0
 AnchorPoint: "top" 512 912 basechar 0
@@ -12830,6 +12846,7 @@ SplineSet
  192 671.525098093 335.525073758 528 512 528 c 0
  688.474901907 528 832 671.525073758 832 848 c 0
 EndSplineSet
+Substitution2: "'onum' Oldstyle Figures lookup 16 subtable" nine.oldstyle
 EndChar
 
 StartChar: six
@@ -12881,6 +12898,7 @@ SplineSet
  832 576.474901907 688.474926242 720 512 720 c 0
  335.525098093 720 192 576.474926242 192 400 c 0
 EndSplineSet
+Substitution2: "'onum' Oldstyle Figures lookup 16 subtable" six.oldstyle
 EndChar
 
 StartChar: five
@@ -12942,6 +12960,7 @@ SplineSet
  160 1225.2008717 179.831056274 1247.95463374 208.053849193 1247.95463374 c 2
  816 1248 l 2
 EndSplineSet
+Substitution2: "'onum' Oldstyle Figures lookup 16 subtable" five.oldstyle
 EndChar
 
 StartChar: two
@@ -13016,6 +13035,7 @@ SplineSet
  756.984144092 104.856827171 776.678588611 121.788580794 792.968096666 148.54315071 c 0
  816.546718216 187.269665756 832 248.776852809 832 336 c 0
 EndSplineSet
+Substitution2: "'onum' Oldstyle Figures lookup 16 subtable" two.oldstyle
 EndChar
 
 StartChar: y
@@ -36364,7 +36384,9 @@ EndChar
 StartChar: one.oldstyle
 Encoding: 65537 -1 874
 Width: 1024
-Flags: HW
+Flags: W
+HStem: 0 21G<626.754 653.246> 1227.96 20G<632.855 651.927>
+VStem: 592 96<0.140075 1084.13>
 LayerCount: 2
 Back
 SplineSet
