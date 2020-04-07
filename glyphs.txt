@@ -884,9 +884,3 @@ U+27F6    10230  ⟶     LONG RIGHTWARDS ARROW
 # Supplemental Punctuation
 U+2E2E    11822  ⸮     REVERSED QUESTION MARK
 U+2E41    11841  ⹁     REVERSED COMMA
-# Private Use Area
-U+E02C    57388       <none>
-U+E02D    57389       <none>
-U+E02E    57390       <none>
-U+E02F    57391       <none>
-U+E0A0    57504       <none>
