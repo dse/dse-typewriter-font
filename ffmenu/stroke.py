@@ -112,7 +112,8 @@ def updateGlyph(font, glyph):
 def generateBraille(font, codepoint):
     glyphWidth = 1024
     glyphHeight = font.ascent + font.descent
-    brailleScale = 0.875
+    brailleScale = 0.75
+    dotWidth = 112
 
     try:
         char = unichr(codepoint)
@@ -161,7 +162,7 @@ def generateBraille(font, codepoint):
                 float(middleY) - (float(dotYY) - 1.5) * float(glyphHeight) / 4 * brailleScale
             ))
             circle = fontforge.unitShape(0)
-            circle.transform(psMat.scale(128))
+            circle.transform(psMat.scale(dotWidth))
             circle.transform(psMat.translate(dotX, dotY))
             circle.draw(pen)
         pen = None
