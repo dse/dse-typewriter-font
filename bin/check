@@ -75,7 +75,6 @@ while (<>) {
         } else {
             push(@{$char->{lines}}, $_);
         }
-    } else {
     }
 }
 eof:
@@ -89,6 +88,12 @@ sub checkChar {
         my $back = $char->{back};
         my $fore = $char->{fore};
         my $codepoint = $char->{encoding}->[1];
+        if (defined $codepoint) {
+            if ($codepoint >= 0x2800 && $codepoint < 0x2900) {
+                # Braille
+                return;
+            }
+        }
         if (defined $fore && defined $back) {
             if ($fore->{splinesetCount} && $back->{splinesetCount} &&
                     !$back->{referenceCount} && !$fore->{referenceCount}) {
