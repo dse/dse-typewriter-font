@@ -237,3 +237,12 @@ table.glyphs td {
         font-variant-numeric: oldstyle-nums;
     }
 }
+.ss01 {
+    font-feature-settings: "ss01" 1;
+}
+.ss02 {
+    font-feature-settings: "ss02" 1;
+}
+.ss03 {
+    font-feature-settings: "ss03" 1;
+}
