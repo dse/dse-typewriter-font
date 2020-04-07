@@ -22,7 +22,7 @@ TTFAUTOHINT = ttfautohint \
 	--ignore-restrictions \
 	--verbose
 
-default: $(TTFS)
+default: $(TTFS) glyphs.txt glyphs.html
 
 ttf/%.ttf: src/%.sfd Makefile
 	bin/check $(SRC)
@@ -69,11 +69,14 @@ testing/%--ah.ttf: testing/%--nh.ttf Makefile
 	rm $@.tmp.ttf
 
 glyphs.inc.html: $(SRC) Makefile
-	ffglyphs --list-blocks --class="glyphs" --format=html $(SRC) >$@
+	ffglyphs --list-blocks --class="glyphs" --format=html $(SRC) >$@.tmp.html
+	mv $@.tmp.html $@
 glyphs.txt: $(SRC) Makefile
-	ffglyphs --list-blocks $(SRC) >$@
+	ffglyphs --list-blocks $(SRC) >$@.tmp.txt
+	mv $@.tmp.txt $@
 glyphs.html: glyphs.inc.html glyphs.ssi.html Makefile
-	ssi glyphs.ssi.html >$@
+	ssi glyphs.ssi.html >$@.tmp.html
+	mv $@.tmp.html $@
 macedit:
 	/Applications/FontForge.app/Contents/Resources/opt/local/bin/fontforge "$$(realpath $(SRC))"
 maceditttf:
