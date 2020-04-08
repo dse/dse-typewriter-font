@@ -237,12 +237,35 @@ table.glyphs td {
         font-variant-numeric: oldstyle-nums;
     }
 }
+
+/* oldstyle figures */
+.onum {
+    font-feature-settings: "onum" 1;
+}
+
+/* slashed zero */
 .ss01 {
     font-feature-settings: "ss01" 1;
 }
+
+/* dotless zero */
 .ss02 {
     font-feature-settings: "ss02" 1;
 }
+
+/* dollar sign with two vertical lines */
 .ss03 {
     font-feature-settings: "ss03" 1;
+}
+
+/* lowercase-L shaped one */
+.ss04 {
+    font-feature-settings: "ss04" 1;
+}
+
+.onum-ss02-ss04 {
+    font-feature-settings: "onum" 1, "ss02" 1, "ss04" 1;
+}
+.ss02-ss04 {
+    font-feature-settings: "ss02" 1, "ss04" 1;
 }

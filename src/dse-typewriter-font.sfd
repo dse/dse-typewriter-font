@@ -22,7 +22,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 0
 CreationTime: 1582156054
-ModificationTime: 1586293029
+ModificationTime: 1586309965
 PfmFamily: 17
 TTFWeight: 400
 TTFWidth: 5
@@ -45,6 +45,7 @@ HheadDOffset: 0
 OS2CapHeight: 1248
 OS2XHeight: 864
 OS2Vendor: 'PfEd'
+Lookup: 1 0 0 "Lowercase L Styled One (ss04)" { "Lowercase L Styled One (ss04) subtable"  } ['ss04' ('DFLT' <'dflt' > 'brai' <'dflt' > 'cyrl' <'SRB ' 'dflt' > 'grek' <'dflt' > 'latn' <'IPPH' 'ROM ' 'TRK ' 'dflt' > ) ]
 Lookup: 1 0 0 "Slashed Zero (ss01)" { "Slashed Zero (ss01) subtable"  } ['ss01' ('DFLT' <'dflt' > 'cyrl' <'SRB ' 'dflt' > 'grek' <'dflt' > 'latn' <'IPPH' 'ROM ' 'TRK ' 'dflt' > ) ]
 Lookup: 1 0 0 "Dotless Zero (ss02)" { "Dotless Zero (ss02) subtable"  } ['ss02' ('DFLT' <'dflt' > 'cyrl' <'SRB ' 'dflt' > 'grek' <'dflt' > 'latn' <'IPPH' 'ROM ' 'TRK ' 'dflt' > ) ]
 Lookup: 1 0 0 "Fancy Dollar Sign (ss03)" { "Fancy Dollar Sign (ss03) subtable"  } ['ss03' ('DFLT' <'dflt' > 'cyrl' <'SRB ' 'dflt' > 'grek' <'dflt' > 'latn' <'IPPH' 'ROM ' 'TRK ' 'dflt' > ) ]
@@ -58,7 +59,7 @@ NameList: AGL For New Fonts
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 10432 16 9
+WinInfo: 0 16 9
 BeginPrivate: 0
 EndPrivate
 Grid
@@ -8492,7 +8493,7 @@ Grid
 EndSplineSet
 TeXData: 1 0 0 346030 173015 115343 0 -1048576 115343 783286 444596 497025 792723 393216 433062 380633 303038 157286 324010 404750 52429 2506097 1059062 262144
 AnchorClass2: "ogonek"""  "cedilla"""  "top""" 
-BeginChars: 65551 1137
+BeginChars: 65552 1138
 
 StartChar: space
 Encoding: 32 32 0
@@ -8808,6 +8809,7 @@ SplineSet
  181.853633925 0 160 21.8555282921 160 48 c 0
 EndSplineSet
 Substitution2: "'onum' Oldstyle Figures lookup 16 subtable" one.oldstyle
+Substitution2: "Lowercase L Styled One (ss04) subtable" one.ss04
 EndChar
 
 StartChar: backslash
@@ -11456,11 +11458,11 @@ AnchorPoint: "top" 512 1272 basechar 0
 LayerCount: 2
 Back
 SplineSet
-208 48 m 25
- 816 48 l 1049
-208 1200 m 25
- 512 1200 l 25
- 512 64 l 1049
+208 48 m 29
+ 816 48 l 1053
+208 1200 m 29
+ 512 1200 l 29
+ 512 64 l 1053
 EndSplineSet
 Fore
 SplineSet
@@ -44502,6 +44504,42 @@ SplineSet
  381.814453125 928 432 877.814453125 432 816 c 0
  432 754.185546875 381.814453125 704 320 704 c 0
  258.185546875 704 208 754.185546875 208 816 c 0
+EndSplineSet
+EndChar
+
+StartChar: one.ss04
+Encoding: 65551 -1 1137
+Width: 1024
+Flags: W
+HStem: 0 96<160.14 464 560 863.86> 1152 96<160.14 464>
+VStem: 464 95.9997<96 1152>
+LayerCount: 2
+Back
+SplineSet
+208 48 m 29
+ 816 48 l 1053
+208 1200 m 29
+ 512 1200 l 29
+ 512 64 l 1053
+EndSplineSet
+Fore
+SplineSet
+208 0 m 2
+ 181.50808 0 160 21.50808 160 48 c 0
+ 160 74.49192 181.50808 96 208 96 c 2
+ 464 96 l 1
+ 464 1152 l 1
+ 208 1152 l 2
+ 181.50808 1152 160 1173.50808 160 1200 c 0
+ 160 1226.49192 181.50808 1248 208 1248 c 2
+ 512 1248 l 2
+ 524.287408679 1248 536.574817358 1243.31684593 545.941125497 1233.95053779 c 0
+ 555.307433636 1224.58422965 559.990587706 1212.29682097 559.990587706 1200.00941229 c 0
+ 559.990587706 832.006274863 559.999734867 464.003137431 559.999734867 96 c 1
+ 816 96 l 2
+ 842.49192 96 864 74.49192 864 48 c 0
+ 864 21.50808 842.49192 0 816 0 c 2
+ 208 0 l 2
 EndSplineSet
 EndChar
 EndChars
