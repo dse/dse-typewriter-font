@@ -1,15 +1,4 @@
-@font-face {
-    font-family: 'DSE Typewriter web font';
-    src: url('../ttf/dse-typewriter-font.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'DSE Typewriter LH web font';
-    src: url('../ttf/dse-typewriter-font-lh.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
+@import url('fonts.css');
 
 html {
     font-family: 'DSE Typewriter web font';
@@ -33,9 +22,14 @@ pre {
     box-sizing: border-box;
 }
 body {
-    margin: 0 auto;
-    padding: 1rem;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    padding-left: 1rem;
+    padding-right: 1rem;
     max-width: 960px;
+    margin: 0 auto;
 }
 h1, h2, h3, h4, h5, h6 {
     font-weight: normal;
