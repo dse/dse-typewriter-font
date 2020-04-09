@@ -119,7 +119,8 @@ ul.typewriter > li::before {
     align-content: flex-start;
     box-sizing: border-box;
 }
-.row > .columns {
+.row > .columns,
+.row > .column {
     padding-left: 1rem;
     padding-right: 1rem;
     min-height: 1px;
