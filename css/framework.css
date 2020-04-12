@@ -32,6 +32,9 @@ ul ul, ul ol, ul dl, ol ul, ol ol, ol dl, dl ul, dl ol, dl dl {
     max-width: 960px;
     margin: 0 auto;
 }
+.container-1200 {
+    max-width: 1200px;
+}
 .container-fluid {
     padding-left: 1rem;
     padding-right: 1rem;
