@@ -1,6 +1,10 @@
 @import url('fonts.css');
-@import url('normalize.css');
-@import url('framework.css');
+@import url('https://webonastick.com/yaf/normalize-8.0.1.css');
+@import url('https://webonastick.com/yaf/yaf-global-styles.css');
+@import url('https://webonastick.com/yaf/yaf-typography.css');
+@import url('https://webonastick.com/yaf/yaf-forms.css');
+@import url('https://webonastick.com/yaf/yaf-helpers.css');
+@import url('https://webonastick.com/yaf/yaf-xy-grid.css');
 
 html {
     font-family: 'DSE Typewriter web font';
@@ -84,9 +88,6 @@ table > * > * > th {
 table > * > * > th {
     text-align: left;
 }
-.breadcrumbs {
-    border-bottom: 1px solid black; margin-bottom: 1rem;
-}
 .breadcrumbs ul {
     list-style: none;
     padding-left: 0;
@@ -160,6 +161,9 @@ table.glyphs td {
     font-feature-settings: "ss02" 1, "ss04" 1;
 }
 
-.main-container {
+.grid-container-main {
+    padding-top: 1rem;
+}
+.grid-container-breadcrumbs {
     padding-top: 1rem;
 }
