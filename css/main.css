@@ -159,3 +159,7 @@ table.glyphs td {
 .ss02-ss04 {
     font-feature-settings: "ss02" 1, "ss04" 1;
 }
+
+.main-container {
+    padding-top: 1rem;
+}
