@@ -88,6 +88,12 @@ table > * > * > th {
 table > * > * > th {
     text-align: left;
 }
+table > thead {
+    vertical-align: bottom;
+}
+table > tbody {
+    vertical-align: baseline;
+}
 .breadcrumbs ul {
     list-style: none;
     padding-left: 0;
