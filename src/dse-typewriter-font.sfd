@@ -22,7 +22,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 0
 CreationTime: 1582156054
-ModificationTime: 1586675941
+ModificationTime: 1587109739
 PfmFamily: 17
 TTFWeight: 400
 TTFWidth: 5
@@ -45,6 +45,7 @@ HheadDOffset: 0
 OS2CapHeight: 1248
 OS2XHeight: 864
 OS2Vendor: 'PfEd'
+Lookup: 1 0 0 "'i'/'l' with bottom serif only to the right" { "'i'/'l' with bottom serif only to the right subtable"  } ['ss05' ('DFLT' <'dflt' > 'brai' <'dflt' > 'cyrl' <'SRB ' 'dflt' > 'grek' <'dflt' > 'latn' <'IPPH' 'ROM ' 'TRK ' 'dflt' > ) ]
 Lookup: 1 0 0 "Lowercase L Styled One (ss04)" { "Lowercase L Styled One (ss04) subtable"  } ['ss04' ('DFLT' <'dflt' > 'brai' <'dflt' > 'cyrl' <'SRB ' 'dflt' > 'grek' <'dflt' > 'latn' <'IPPH' 'ROM ' 'TRK ' 'dflt' > ) ]
 Lookup: 1 0 0 "Slashed Zero (ss01)" { "Slashed Zero (ss01) subtable"  } ['ss01' ('DFLT' <'dflt' > 'cyrl' <'SRB ' 'dflt' > 'grek' <'dflt' > 'latn' <'IPPH' 'ROM ' 'TRK ' 'dflt' > ) ]
 Lookup: 1 0 0 "Dotless Zero (ss02)" { "Dotless Zero (ss02) subtable"  } ['ss02' ('DFLT' <'dflt' > 'cyrl' <'SRB ' 'dflt' > 'grek' <'dflt' > 'latn' <'IPPH' 'ROM ' 'TRK ' 'dflt' > ) ]
@@ -59,7 +60,7 @@ NameList: AGL For New Fonts
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 11120 16 9
+WinInfo: 65424 16 9
 BeginPrivate: 0
 EndPrivate
 Grid
@@ -8493,7 +8494,7 @@ Grid
 EndSplineSet
 TeXData: 1 0 0 346030 173015 115343 0 -1048576 115343 783286 444596 497025 792723 393216 433062 380633 303038 157286 324010 404750 52429 2506097 1059062 262144
 AnchorClass2: "ogonek"""  "cedilla"""  "top""" 
-BeginChars: 65552 1182
+BeginChars: 65567 1197
 
 StartChar: space
 Encoding: 32 32 0
@@ -11451,7 +11452,9 @@ StartChar: l
 Encoding: 108 108 64
 Width: 1024
 VWidth: 0
-Flags: HW
+Flags: W
+HStem: 0 96<160.142 464 560 863.858> 1152 96<160.142 464>
+VStem: 464 96<96 1152>
 AnchorPoint: "cedilla" 512 48 basechar 0
 AnchorPoint: "ogonek" 705 49 basechar 0
 AnchorPoint: "top" 512 1272 basechar 0
@@ -11482,6 +11485,7 @@ SplineSet
  208 0 l 2
  181.853633925 0 160 21.8555282921 160 48 c 0
 EndSplineSet
+Substitution2: "'i'/'l' with bottom serif only to the right subtable" l.ss05
 EndChar
 
 StartChar: h
@@ -11730,11 +11734,14 @@ StartChar: i
 Encoding: 105 105 70
 Width: 1024
 VWidth: 0
-Flags: HW
+Flags: W
+HStem: 0 96<160.142 464 560 863.858> 768 96<160.142 464> 1008 192<383.129 544.871>
+VStem: 368 192<1023.13 1184.87> 464 96<96 768>
 LayerCount: 2
 Fore
 Refer: 121 775 N 1 0 0 1 -48 -360 2
 Refer: 115 305 N 1 0 0 1 0 0 3
+Substitution2: "'i'/'l' with bottom serif only to the right subtable" i.ss05
 EndChar
 
 StartChar: k
@@ -13999,17 +14006,19 @@ StartChar: dotlessi
 Encoding: 305 305 115
 Width: 1024
 VWidth: 0
-Flags: HW
+Flags: W
+HStem: 0 96<160.142 464 560 863.858> 768 96<160.142 464>
+VStem: 464 96<96 768>
 AnchorPoint: "ogonek" 641 49 basechar 0
 AnchorPoint: "top" 464 912 basechar 0
 LayerCount: 2
 Back
 SplineSet
-208 48 m 25
- 816 48 l 1049
-208 816 m 25
- 512 816 l 25
- 512 64 l 1049
+208 48 m 29
+ 816 48 l 1053
+208 816 m 29
+ 512 816 l 29
+ 512 64 l 1053
 EndSplineSet
 Fore
 SplineSet
@@ -14029,6 +14038,7 @@ SplineSet
  208 0 l 2
  181.853633925 0 160 21.8555282921 160 48 c 0
 EndSplineSet
+Substitution2: "'i'/'l' with bottom serif only to the right subtable" dotlessi.ss05
 EndChar
 
 StartChar: gravecomb
@@ -14187,7 +14197,9 @@ StartChar: uni0307
 Encoding: 775 775 121
 Width: 1024
 VWidth: 0
-Flags: HW
+Flags: W
+HStem: 1368 192<431.129 592.871>
+VStem: 416 192<1383.13 1544.87>
 AnchorPoint: "top" 512 1272 mark 0
 LayerCount: 2
 Back
@@ -14884,6 +14896,7 @@ LayerCount: 2
 Fore
 Refer: 116 768 N 1 0 0 1 -48 -360 2
 Refer: 115 305 N 1 0 0 1 0 0 3
+Substitution2: "'i'/'l' with bottom serif only to the right subtable" igrave.ss05
 EndChar
 
 StartChar: iacute
@@ -14895,6 +14908,7 @@ LayerCount: 2
 Fore
 Refer: 117 769 N 1 0 0 1 -48 -360 2
 Refer: 115 305 N 1 0 0 1 0 0 3
+Substitution2: "'i'/'l' with bottom serif only to the right subtable" iacute.ss05
 EndChar
 
 StartChar: icircumflex
@@ -14906,6 +14920,7 @@ LayerCount: 2
 Fore
 Refer: 118 770 N 1 0 0 1 -48 -360 2
 Refer: 115 305 N 1 0 0 1 0 0 3
+Substitution2: "'i'/'l' with bottom serif only to the right subtable" icircumflex.ss05
 EndChar
 
 StartChar: idieresis
@@ -14917,6 +14932,7 @@ LayerCount: 2
 Fore
 Refer: 122 776 N 1 0 0 1 -48 -360 2
 Refer: 115 305 N 1 0 0 1 0 0 3
+Substitution2: "'i'/'l' with bottom serif only to the right subtable" idieresis.ss05
 EndChar
 
 StartChar: ntilde
@@ -15390,6 +15406,7 @@ LayerCount: 2
 Fore
 Refer: 119 771 N 1 0 0 1 -48 -360 2
 Refer: 115 305 N 1 0 0 1 0 0 3
+Substitution2: "'i'/'l' with bottom serif only to the right subtable" itilde.ss05
 EndChar
 
 StartChar: Imacron
@@ -15412,6 +15429,7 @@ LayerCount: 2
 Fore
 Refer: 124 772 N 1 0 0 1 -48 -360 2
 Refer: 115 305 N 1 0 0 1 0 0 3
+Substitution2: "'i'/'l' with bottom serif only to the right subtable" imacron.ss05
 EndChar
 
 StartChar: Ibreve
@@ -15489,6 +15507,7 @@ LayerCount: 2
 Fore
 Refer: 117 769 N 1 0 0 1 0 0 2
 Refer: 64 108 N 1 0 0 1 0 0 3
+Substitution2: "'i'/'l' with bottom serif only to the right subtable" lacute.ss05
 EndChar
 
 StartChar: Nacute
@@ -15995,6 +16014,7 @@ LayerCount: 2
 Fore
 Refer: 127 780 N 1 0 0 1 -48 -360 2
 Refer: 115 305 N 1 0 0 1 0 0 3
+Substitution2: "'i'/'l' with bottom serif only to the right subtable" uni01D0.ss05
 EndChar
 
 StartChar: uni01D1
@@ -16336,6 +16356,7 @@ LayerCount: 2
 Fore
 Refer: 128 783 N 1 0 0 1 -48 -360 2
 Refer: 115 305 N 1 0 0 1 0 0 3
+Substitution2: "'i'/'l' with bottom serif only to the right subtable" uni0209.ss05
 EndChar
 
 StartChar: uni020C
@@ -29009,6 +29030,7 @@ LayerCount: 2
 Fore
 Refer: 699 808 N 1 0 0 1 -5.07262 -64.4404 2
 Refer: 70 105 N 1 0 0 1 0 0 3
+Substitution2: "'i'/'l' with bottom serif only to the right subtable" iogonek.ss05
 EndChar
 
 StartChar: Uogonek
@@ -35659,6 +35681,7 @@ SplineSet
  321.697468425 450.533491984 313.09840896 447.93947614 303.898265626 447.93947614 c 0
 EndSplineSet
 Refer: 64 108 N 1 0 0 1 0 0 2
+Substitution2: "'i'/'l' with bottom serif only to the right subtable" lslash.ss05
 EndChar
 
 StartChar: florin
@@ -47380,6 +47403,202 @@ SplineSet
  773.048178812 719.690913828 724.014107628 780.631174602 693.039504009 842.58038184 c 0
  689.75857418 849.123545424 687.9435746 856.399058557 687.9435746 864.095142354 c 0
 EndSplineSet
+EndChar
+
+StartChar: dotlessi.ss05
+Encoding: 65552 -1 1182
+Width: 1024
+Flags: HW
+AnchorPoint: "top" 464 912 basechar 0
+AnchorPoint: "ogonek" 641 49 basechar 0
+LayerCount: 2
+Back
+SplineSet
+816 48 m 1
+ 512 48 l 29
+ 512 816 l 1
+ 208 816 l 1049
+EndSplineSet
+Fore
+SplineSet
+511.990823841 864.009646616 m 2
+ 541.170967925 864.009646616 560 840.138637029 560 816 c 2
+ 560 96 l 1
+ 816 96 l 2
+ 842.49192 96 864 74.49192 864 48 c 0
+ 864 21.50808 842.49192 0 816 0 c 2
+ 512 0 l 2
+ 485.50808 0 464 21.50808 464 48 c 2
+ 464 768 l 1
+ 208 768 l 2
+ 181.50808 768 160 789.50808 160 816 c 0
+ 160 842.49192 181.50808 864 208 864 c 2
+ 511.990823841 864.009646616 l 2
+EndSplineSet
+EndChar
+
+StartChar: i.ss05
+Encoding: 65553 -1 1183
+Width: 1024
+Flags: H
+LayerCount: 2
+Fore
+Refer: 121 775 N 1 0 0 1 0 -366 2
+Refer: 1182 -1 N 1 0 0 1 0 0 3
+EndChar
+
+StartChar: l.ss05
+Encoding: 65554 -1 1184
+Width: 1024
+Flags: HW
+AnchorPoint: "top" 512 1272 basechar 0
+AnchorPoint: "ogonek" 705 49 basechar 0
+AnchorPoint: "cedilla" 512 48 basechar 0
+LayerCount: 2
+Back
+SplineSet
+816 48 m 1
+ 512 48 l 29
+ 512 1200 l 1
+ 208 1200 l 1049
+EndSplineSet
+Fore
+SplineSet
+208 1152 m 2
+ 181.50808 1152 160 1173.50808 160 1200 c 0
+ 160 1226.49192 181.50808 1248 208 1248 c 2
+ 512.009412294 1247.99058771 l 2
+ 524.296820973 1247.99058771 536.584229652 1243.30743364 545.950537791 1233.9411255 c 0
+ 555.31684593 1224.57481736 560 1212.28740868 560 1200 c 2
+ 560 96 l 1
+ 816 96 l 2
+ 842.49192 96 864 74.49192 864 48 c 0
+ 864 21.50808 842.49192 0 816 0 c 2
+ 512 0 l 2
+ 485.50808 0 464 21.50808 464 48 c 2
+ 464 1152 l 1
+ 208 1152 l 2
+EndSplineSet
+EndChar
+
+StartChar: igrave.ss05
+Encoding: 65555 -1 1185
+Width: 1024
+Flags: HW
+LayerCount: 2
+Fore
+Refer: 1182 -1 N 1 0 0 1 0 0 2
+Refer: 116 768 S 1 0 0 1 -3.48163 -316.147 2
+EndChar
+
+StartChar: iacute.ss05
+Encoding: 65556 -1 1186
+Width: 1024
+Flags: HW
+LayerCount: 2
+Fore
+Refer: 1182 -1 N 1 0 0 1 0 0 2
+Refer: 117 769 S 1 0 0 1 3.48157 -316.147 2
+EndChar
+
+StartChar: icircumflex.ss05
+Encoding: 65557 -1 1187
+Width: 1024
+Flags: HW
+LayerCount: 2
+Fore
+Refer: 1182 -1 N 1 0 0 1 0 0 2
+Refer: 118 770 S 1 0 0 1 -1.7829e-05 -316.183 2
+EndChar
+
+StartChar: idieresis.ss05
+Encoding: 65558 -1 1188
+Width: 1024
+Flags: HW
+LayerCount: 2
+Fore
+Refer: 1182 -1 N 1 0 0 1 0 0 2
+Refer: 122 776 S 1 0 0 1 0 -340 2
+EndChar
+
+StartChar: itilde.ss05
+Encoding: 65559 -1 1189
+Width: 1024
+Flags: HW
+LayerCount: 2
+Fore
+Refer: 1182 -1 N 1 0 0 1 0 0 2
+Refer: 119 771 S 1 0 0 1 0 -316 2
+EndChar
+
+StartChar: imacron.ss05
+Encoding: 65560 -1 1190
+Width: 1024
+Flags: HW
+LayerCount: 2
+Fore
+Refer: 1182 -1 N 1 0 0 1 0 0 2
+Refer: 124 772 S 1 0 0 1 0 -412 2
+EndChar
+
+StartChar: ibreve.ss05
+Encoding: 65561 -1 1191
+Width: 1024
+Flags: HW
+LayerCount: 2
+Fore
+Refer: 1182 -1 N 1 0 0 1 0 0 2
+Refer: 120 774 S 1 0 0 1 0 -316 2
+Substitution2: "'i'/'l' with bottom serif only to the right subtable" ibreve.ss05
+EndChar
+
+StartChar: iogonek.ss05
+Encoding: 65562 -1 1192
+Width: 1024
+Flags: H
+LayerCount: 2
+Fore
+Refer: 699 808 N 1 0 0 1 146.927 -64.4404 2
+Refer: 1183 -1 N 1 0 0 1 0 0 3
+EndChar
+
+StartChar: lacute.ss05
+Encoding: 65563 -1 1193
+Width: 1024
+Flags: H
+LayerCount: 2
+Fore
+Refer: 117 769 N 1 0 0 1 0 0 2
+Refer: 1184 -1 N 1 0 0 1 0 0 3
+EndChar
+
+StartChar: lslash.ss05
+Encoding: 65564 -1 1194
+Width: 1024
+Flags: HW
+LayerCount: 2
+Fore
+Refer: 1184 -1 N 1 0 0 1 0 0 2
+EndChar
+
+StartChar: uni01D0.ss05
+Encoding: 65565 -1 1195
+Width: 1024
+Flags: HW
+LayerCount: 2
+Fore
+Refer: 1182 -1 N 1 0 0 1 0 0 2
+Refer: 127 780 S 1 0 0 1 0 -300.183 2
+EndChar
+
+StartChar: uni0209.ss05
+Encoding: 65566 -1 1196
+Width: 1024
+Flags: HW
+LayerCount: 2
+Fore
+Refer: 1182 -1 N 1 0 0 1 0 0 2
+Refer: 128 783 N 1 0 0 1 -96.0002 -316.193 2
 EndChar
 EndChars
 EndSplineFont
