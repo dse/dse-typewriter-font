@@ -83,7 +83,7 @@ table {
 }
 table > * > * > td,
 table > * > * > th {
-    padding: 0 1ch 0 0;
+    padding: 0 2ch 0 0;
 }
 table > * > * > th {
     text-align: left;
@@ -119,16 +119,6 @@ table.glyphs td {
     vertical-align: baseline;
 }
 
-.old-style-numerals {
-    font-feature-settings: "onum" 1;
-}
-@supports (font-variant-numeric: oldstyle-nums) {
-    .old-style-numerals {
-        font-feature-settings: normal;
-        font-variant-numeric: oldstyle-nums;
-    }
-}
-
 /* oldstyle figures */
 .onum {
     font-feature-settings: "onum" 1;
@@ -154,8 +144,19 @@ table.glyphs td {
     font-feature-settings: "ss04" 1;
 }
 
+/* i and l with lower serif only to the right */
+.ss05 {
+    font-feature-settings: "ss05" 1;
+}
+
 .onum-ss02-ss04 {
     font-feature-settings: "onum" 1, "ss02" 1, "ss04" 1;
+}
+.onum-ss01 {
+    font-feature-settings: "onum" 1, "ss01" 1;
+}
+.onum-ss02 {
+    font-feature-settings: "onum" 1, "ss02" 1;
 }
 .ss02-ss04 {
     font-feature-settings: "ss02" 1, "ss04" 1;
@@ -166,4 +167,8 @@ table.glyphs td {
 }
 .grid-container-breadcrumbs {
     padding-top: 1rem;
+}
+
+tr.combined-ss {
+    color: blue;
 }
