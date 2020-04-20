@@ -146,8 +146,8 @@ table.glyphs td {
 }
 
 /* lowercase-L shaped one */
-.ss04 {
-    font-feature-settings: "ss04" 1;
+.cv03 {
+    font-feature-settings: "cv03" 1;
 }
 
 /* i and l with lower serif only to the right */
@@ -155,8 +155,8 @@ table.glyphs td {
     font-feature-settings: "ss05" 1;
 }
 
-.onum-cv01-ss04 {
-    font-feature-settings: "onum" 1, "cv01" 1, "ss04" 1;
+.onum-cv01-cv03 {
+    font-feature-settings: "onum" 1, "cv01" 1, "cv03" 1;
 }
 .onum-zero {
     font-feature-settings: "onum" 1, "zero" 1;
@@ -164,8 +164,8 @@ table.glyphs td {
 .onum-cv01 {
     font-feature-settings: "onum" 1, "cv01" 1;
 }
-.cv01-ss04 {
-    font-feature-settings: "cv01" 1, "ss04" 1;
+.cv01-cv03 {
+    font-feature-settings: "cv01" 1, "cv03" 1;
 }
 
 .grid-container-main {

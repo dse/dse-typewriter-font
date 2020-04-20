@@ -46,7 +46,7 @@ OS2CapHeight: 1248
 OS2XHeight: 864
 OS2Vendor: 'PfEd'
 Lookup: 1 0 0 "'i'/'l' with bottom serif only to the right" { "'i'/'l' with bottom serif only to the right subtable"  } ['ss05' ('DFLT' <'dflt' > 'brai' <'dflt' > 'cyrl' <'SRB ' 'dflt' > 'grek' <'dflt' > 'latn' <'IPPH' 'ROM ' 'TRK ' 'dflt' > ) ]
-Lookup: 1 0 0 "Lowercase L Styled One (ss04)" { "Lowercase L Styled One (ss04) subtable"  } ['ss04' ('DFLT' <'dflt' > 'brai' <'dflt' > 'cyrl' <'SRB ' 'dflt' > 'grek' <'dflt' > 'latn' <'IPPH' 'ROM ' 'TRK ' 'dflt' > ) ]
+Lookup: 1 0 0 "Lowercase L Styled One (cv03)" { "Lowercase L Styled One (cv03) subtable"  } ['cv03' ('DFLT' <'dflt' > 'brai' <'dflt' > 'cyrl' <'SRB ' 'dflt' > 'grek' <'dflt' > 'latn' <'IPPH' 'ROM ' 'TRK ' 'dflt' > ) ]
 Lookup: 1 0 0 "Slashed Zero (zero)" { "Slashed Zero (zero) subtable"  } ['zero' ('DFLT' <'dflt' > 'cyrl' <'SRB ' 'dflt' > 'grek' <'dflt' > 'latn' <'IPPH' 'ROM ' 'TRK ' 'dflt' > ) ]
 Lookup: 1 0 0 "Dotless Zero (cv01)" { "Dotless Zero (cv01) subtable"  } ['cv01' ('DFLT' <'dflt' > 'cyrl' <'SRB ' 'dflt' > 'grek' <'dflt' > 'latn' <'IPPH' 'ROM ' 'TRK ' 'dflt' > ) ]
 Lookup: 1 0 0 "Fancy Dollar Sign (cv02)" { "Fancy Dollar Sign (cv02) subtable"  } ['cv02' ('DFLT' <'dflt' > 'cyrl' <'SRB ' 'dflt' > 'grek' <'dflt' > 'latn' <'IPPH' 'ROM ' 'TRK ' 'dflt' > ) ]
@@ -8810,7 +8810,7 @@ SplineSet
  181.853633925 0 160 21.8555282921 160 48 c 0
 EndSplineSet
 Substitution2: "'onum' Oldstyle Figures lookup 16 subtable" one.oldstyle
-Substitution2: "Lowercase L Styled One (ss04) subtable" one.ss04
+Substitution2: "Lowercase L Styled One (cv03) subtable" one.cv03
 EndChar
 
 StartChar: backslash
@@ -44614,7 +44614,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: one.ss04
+StartChar: one.cv03
 Encoding: 65551 -1 1137
 Width: 1024
 Flags: W
