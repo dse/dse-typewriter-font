@@ -136,8 +136,8 @@ table.glyphs td {
 }
 
 /* dotless zero */
-.ss02 {
-    font-feature-settings: "ss02" 1;
+.cv01 {
+    font-feature-settings: "cv01" 1;
 }
 
 /* dollar sign with two vertical lines */
@@ -155,17 +155,17 @@ table.glyphs td {
     font-feature-settings: "ss05" 1;
 }
 
-.onum-ss02-ss04 {
-    font-feature-settings: "onum" 1, "ss02" 1, "ss04" 1;
+.onum-cv01-ss04 {
+    font-feature-settings: "onum" 1, "cv01" 1, "ss04" 1;
 }
 .onum-zero {
     font-feature-settings: "onum" 1, "zero" 1;
 }
-.onum-ss02 {
-    font-feature-settings: "onum" 1, "ss02" 1;
+.onum-cv01 {
+    font-feature-settings: "onum" 1, "cv01" 1;
 }
-.ss02-ss04 {
-    font-feature-settings: "ss02" 1, "ss04" 1;
+.cv01-ss04 {
+    font-feature-settings: "cv01" 1, "ss04" 1;
 }
 
 .grid-container-main {
