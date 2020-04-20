@@ -131,8 +131,8 @@ table.glyphs td {
 }
 
 /* slashed zero */
-.ss01 {
-    font-feature-settings: "ss01" 1;
+.zero {
+    font-feature-settings: "zero" 1;
 }
 
 /* dotless zero */
@@ -158,8 +158,8 @@ table.glyphs td {
 .onum-ss02-ss04 {
     font-feature-settings: "onum" 1, "ss02" 1, "ss04" 1;
 }
-.onum-ss01 {
-    font-feature-settings: "onum" 1, "ss01" 1;
+.onum-zero {
+    font-feature-settings: "onum" 1, "zero" 1;
 }
 .onum-ss02 {
     font-feature-settings: "onum" 1, "ss02" 1;

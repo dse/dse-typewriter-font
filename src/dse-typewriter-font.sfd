@@ -47,7 +47,7 @@ OS2XHeight: 864
 OS2Vendor: 'PfEd'
 Lookup: 1 0 0 "'i'/'l' with bottom serif only to the right" { "'i'/'l' with bottom serif only to the right subtable"  } ['ss05' ('DFLT' <'dflt' > 'brai' <'dflt' > 'cyrl' <'SRB ' 'dflt' > 'grek' <'dflt' > 'latn' <'IPPH' 'ROM ' 'TRK ' 'dflt' > ) ]
 Lookup: 1 0 0 "Lowercase L Styled One (ss04)" { "Lowercase L Styled One (ss04) subtable"  } ['ss04' ('DFLT' <'dflt' > 'brai' <'dflt' > 'cyrl' <'SRB ' 'dflt' > 'grek' <'dflt' > 'latn' <'IPPH' 'ROM ' 'TRK ' 'dflt' > ) ]
-Lookup: 1 0 0 "Slashed Zero (ss01)" { "Slashed Zero (ss01) subtable"  } ['ss01' ('DFLT' <'dflt' > 'cyrl' <'SRB ' 'dflt' > 'grek' <'dflt' > 'latn' <'IPPH' 'ROM ' 'TRK ' 'dflt' > ) ]
+Lookup: 1 0 0 "Slashed Zero (zero)" { "Slashed Zero (zero) subtable"  } ['zero' ('DFLT' <'dflt' > 'cyrl' <'SRB ' 'dflt' > 'grek' <'dflt' > 'latn' <'IPPH' 'ROM ' 'TRK ' 'dflt' > ) ]
 Lookup: 1 0 0 "Dotless Zero (ss02)" { "Dotless Zero (ss02) subtable"  } ['ss02' ('DFLT' <'dflt' > 'cyrl' <'SRB ' 'dflt' > 'grek' <'dflt' > 'latn' <'IPPH' 'ROM ' 'TRK ' 'dflt' > ) ]
 Lookup: 1 0 0 "Fancy Dollar Sign (ss03)" { "Fancy Dollar Sign (ss03) subtable"  } ['ss03' ('DFLT' <'dflt' > 'cyrl' <'SRB ' 'dflt' > 'grek' <'dflt' > 'latn' <'IPPH' 'ROM ' 'TRK ' 'dflt' > ) ]
 Lookup: 1 0 0 "'onum' Oldstyle Figures lookup 16" { "'onum' Oldstyle Figures lookup 16 subtable" ("oldstyle") } ['onum' ('cyrl' <'SRB ' 'dflt' > 'grek' <'dflt' > 'latn' <'IPPH' 'ROM ' 'TRK ' 'dflt' > ) ]
@@ -8970,7 +8970,7 @@ SplineSet
  354.232033333 1168 192 943.788782471 192 624 c 0
 EndSplineSet
 Substitution2: "Dotless Zero (ss02) subtable" zero.ss02
-Substitution2: "Slashed Zero (ss01) subtable" zero.ss01
+Substitution2: "Slashed Zero (zero) subtable" zero.zero
 Substitution2: "'onum' Oldstyle Figures lookup 16 subtable" zero.oldstyle
 EndChar
 
@@ -36359,7 +36359,7 @@ SplineSet
  459.160036433 528 416 571.160036433 416 624 c 0
 EndSplineSet
 Substitution2: "Dotless Zero (ss02) subtable" zero.oldstyle.ss02
-Substitution2: "Slashed Zero (ss01) subtable" zero.oldstyle.ss01
+Substitution2: "Slashed Zero (zero) subtable" zero.oldstyle.zero
 EndChar
 
 StartChar: two.oldstyle
@@ -36715,7 +36715,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: zero.ss01
+StartChar: zero.zero
 Encoding: 65546 -1 876
 Width: 1024
 Flags: HW
@@ -36810,7 +36810,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: zero.oldstyle.ss01
+StartChar: zero.oldstyle.zero
 Encoding: 65548 -1 878
 Width: 1024
 Flags: HW
