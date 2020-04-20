@@ -49,7 +49,7 @@ Lookup: 1 0 0 "'i'/'l' with bottom serif only to the right" { "'i'/'l' with bott
 Lookup: 1 0 0 "Lowercase L Styled One (ss04)" { "Lowercase L Styled One (ss04) subtable"  } ['ss04' ('DFLT' <'dflt' > 'brai' <'dflt' > 'cyrl' <'SRB ' 'dflt' > 'grek' <'dflt' > 'latn' <'IPPH' 'ROM ' 'TRK ' 'dflt' > ) ]
 Lookup: 1 0 0 "Slashed Zero (zero)" { "Slashed Zero (zero) subtable"  } ['zero' ('DFLT' <'dflt' > 'cyrl' <'SRB ' 'dflt' > 'grek' <'dflt' > 'latn' <'IPPH' 'ROM ' 'TRK ' 'dflt' > ) ]
 Lookup: 1 0 0 "Dotless Zero (cv01)" { "Dotless Zero (cv01) subtable"  } ['cv01' ('DFLT' <'dflt' > 'cyrl' <'SRB ' 'dflt' > 'grek' <'dflt' > 'latn' <'IPPH' 'ROM ' 'TRK ' 'dflt' > ) ]
-Lookup: 1 0 0 "Fancy Dollar Sign (ss03)" { "Fancy Dollar Sign (ss03) subtable"  } ['ss03' ('DFLT' <'dflt' > 'cyrl' <'SRB ' 'dflt' > 'grek' <'dflt' > 'latn' <'IPPH' 'ROM ' 'TRK ' 'dflt' > ) ]
+Lookup: 1 0 0 "Fancy Dollar Sign (cv02)" { "Fancy Dollar Sign (cv02) subtable"  } ['cv02' ('DFLT' <'dflt' > 'cyrl' <'SRB ' 'dflt' > 'grek' <'dflt' > 'latn' <'IPPH' 'ROM ' 'TRK ' 'dflt' > ) ]
 Lookup: 1 0 0 "'onum' Oldstyle Figures lookup 16" { "'onum' Oldstyle Figures lookup 16 subtable" ("oldstyle") } ['onum' ('cyrl' <'SRB ' 'dflt' > 'grek' <'dflt' > 'latn' <'IPPH' 'ROM ' 'TRK ' 'dflt' > ) ]
 MarkAttachClasses: 1
 DEI: 91125
@@ -13415,7 +13415,7 @@ SplineSet
  464 1392 l 2
 EndSplineSet
 Refer: 96 83 N 1 0 0 1 0 0 2
-Substitution2: "Fancy Dollar Sign (ss03) subtable" dollar.ss03
+Substitution2: "Fancy Dollar Sign (cv02) subtable" dollar.cv02
 EndChar
 
 StartChar: at
@@ -36905,7 +36905,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: dollar.ss03
+StartChar: dollar.cv02
 Encoding: 65550 -1 880
 Width: 1024
 Flags: HW

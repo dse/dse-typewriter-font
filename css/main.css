@@ -141,8 +141,8 @@ table.glyphs td {
 }
 
 /* dollar sign with two vertical lines */
-.ss03 {
-    font-feature-settings: "ss03" 1;
+.cv02 {
+    font-feature-settings: "cv02" 1;
 }
 
 /* lowercase-L shaped one */
