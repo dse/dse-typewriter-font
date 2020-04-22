@@ -22,7 +22,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 0
 CreationTime: 1582156054
-ModificationTime: 1587595872
+ModificationTime: 1587596157
 PfmFamily: 17
 TTFWeight: 400
 TTFWidth: 5
@@ -60,7 +60,7 @@ NameList: AGL For New Fonts
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 9984 16 9
+WinInfo: 9760 16 9
 BeginPrivate: 0
 EndPrivate
 Grid
@@ -48795,8 +48795,8 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: uni2641
-Encoding: 9793 9793 1224
+StartChar: male
+Encoding: 9794 9794 1224
 Width: 1024
 Flags: HW
 LayerCount: 2
