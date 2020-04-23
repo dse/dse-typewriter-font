@@ -13,13 +13,11 @@ import psMat
 import sys
 import unicodedata
 import re
+import os
 
-def copyLayer(glyph, src, dest, replace = True):
-    glyph.activeLayer = dest
-    pen = glyph.glyphPen(replace = replace)
-    glyph.activeLayer = src
-    glyph.draw(pen)
-    pen = None
+sys.path.append(os.environ['HOME'] +
+                "/git/dse.d/fontforge-utilities/lib")
+import ffutils
 
 def updateGlyph(font, glyph):
     bg = glyph.background
@@ -72,7 +70,7 @@ def updateGlyph(font, glyph):
         for reference in references:
             print("    reference: %r" % (reference,))
 
-        copyLayer(glyph, src = 'Back', dest = 'Fore')
+        ffutils.copyLayer(glyph, src = 'Back', dest = 'Fore')
 
         strokeWidth = 96
 
@@ -168,6 +166,10 @@ def generateBraille(font, codepoint):
         pen = None
 
     glyph.width = glyphWidth
+
+fw = ffutils.FontWrapper()
+fw.setFont(fontforge.activeFont())
+fw.setFontData()
 
 activeFont = fontforge.activeFont()
 
