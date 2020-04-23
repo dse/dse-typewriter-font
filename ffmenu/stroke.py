@@ -31,6 +31,8 @@ def updateGlyph(font, glyph):
         middleX = int(0.5 + 1.0 * glyph.width / 2)
         middleY = int(0.5 + 1.0 * (font.ascent - abs(font.descent)) / 2)
         backLayer = glyph.layers['Back']
+
+        # legacy
         if (glyph.unicode >= 0x2500 and glyph.unicode <= 0x254f) or (glyph.unicode >= 0x2574 and glyph.unicode <= 0x257f):
             modifyBackLayer = False
             contours = []
@@ -74,7 +76,8 @@ def updateGlyph(font, glyph):
 
         strokeWidth = 96
 
-        if (glyph.unicode >= 0x2500 and glyph.unicode < 0x2600 and not (glyph.unicode >= 0x2571 and glyph.unicode <= 0x2573)):
+        if (ffutils.isBoxDrawingCharacter(glyph) and not
+            ffutils.isDiagonalBoxDrawingCharacter(glyph)):
             # Box Drawing Characters
             lineCap = 'butt'
             lineJoin = 'round'
@@ -87,15 +90,9 @@ def updateGlyph(font, glyph):
         glyph.removeOverlap()
         glyph.width = savedWidth
 
+        # originally for U+2571 through U+2573 but would not work
         if clip:
-            clipContour = fontforge.contour()
-            clipContour.moveTo(0, font.ascent)
-            clipContour.lineTo(1024, font.ascent)
-            clipContour.lineTo(1024, -font.descent)
-            clipContour.lineTo(0, -font.descent)
-            clipContour.closed = True
-            glyph.layers['Fore'] += clipContour
-            glyph.intersect()
+            ffutils.clipGlyph(glyph)
 
         glyph.addExtrema()
 
@@ -106,66 +103,6 @@ def updateGlyph(font, glyph):
 
         for reference in references:
             glyph.addReference(reference[0], reference[1])
-
-def generateBraille(font, codepoint):
-    glyphWidth = 1024
-    glyphHeight = font.ascent + font.descent
-    brailleScale = 0.75
-    dotWidth = 112
-
-    try:
-        char = unichr(codepoint)
-    except NameError:
-        char = chr(codepoint)
-    try:
-        charName = unicodedata.name(char)
-    except ValueError:
-        sys.stderr.write("%d: not a valid codepoint." % codepoint)
-        return
-
-    matchBlank = re.search(' BLANK$', charName)
-    matchDots = re.search('-([0-9]+)$', charName)
-    if (not matchBlank) and (not matchDots):
-        sys.stderr.write("%d: Glyph name '%s' does not look like a Unicode Braille glyph name." % (codepoint, charName))
-        return
-    if matchDots:
-        dotString = matchDots.group(1)
-
-    glyph = None
-    if codepoint in activeFont:
-        glyph = activeFont[codepoint]
-        glyph.clear()
-    else:
-        glyph = activeFont.createChar(codepoint)
-
-    if matchDots:
-        # where dots 1 through 8 are located
-        dotsXX = [0, 0, 0, 1, 1, 1, 0, 1]
-        dotsYY = [0, 1, 2, 0, 1, 2, 3, 3]
-
-        middleX = int(0.5 + float(glyphWidth) / 2.0)
-        middleY = int(0.5 + (float(font.ascent) - float(abs(font.descent))) / 2)
-
-        glyph.activeLayer = 'Fore'
-        pen = glyph.glyphPen()
-        for dotNumberChar in dotString:
-            dotNumber = int(dotNumberChar) - 1
-            dotXX = dotsXX[dotNumber]
-            dotYY = dotsYY[dotNumber]
-            dotX = int(0.5 + (
-                float(middleX) + (float(dotXX) - 0.5) * float(glyphWidth) / 2 * brailleScale
-            ))
-            print("<%d %d %d %d>" % (middleX, dotXX, glyphWidth, dotX))
-            dotY = int(0.5 + (
-                float(middleY) - (float(dotYY) - 1.5) * float(glyphHeight) / 4 * brailleScale
-            ))
-            circle = fontforge.unitShape(0)
-            circle.transform(psMat.scale(dotWidth))
-            circle.transform(psMat.translate(dotX, dotY))
-            circle.draw(pen)
-        pen = None
-
-    glyph.width = glyphWidth
 
 fw = ffutils.FontWrapper()
 fw.setFont(fontforge.activeFont())
@@ -181,7 +118,7 @@ codes = [code for code in activeFont.selection]
 for code in codes:
     print(code)
     if code >= 0x2800 and code < 0x2900: # BRAILLE
-        generateBraille(activeFont, code)
+        ffutils.generateBraille(activeFont, code)
     elif code in activeFont:
         glyph = activeFont[code]
         updateGlyph(activeFont, glyph)
