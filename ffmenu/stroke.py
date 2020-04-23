@@ -27,7 +27,6 @@ if activeFont == None:
 codes = [code for code in activeFont.selection]
 
 for code in codes:
-    print(code)
     if code >= 0x2800 and code < 0x2900: # BRAILLE
         ffutils.generateBraille(activeFont, code)
     elif code in activeFont:
