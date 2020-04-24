@@ -22,7 +22,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 0
 CreationTime: 1582156054
-ModificationTime: 1587756374
+ModificationTime: 1587757725
 PfmFamily: 17
 TTFWeight: 400
 TTFWidth: 5
@@ -60,7 +60,7 @@ NameList: AGL For New Fonts
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 0 16 9
+WinInfo: 1040 16 9
 BeginPrivate: 0
 EndPrivate
 Grid
@@ -34391,7 +34391,6 @@ SplineSet
  832 629.921288359 685.12206688 784 512 784 c 0
  338.87793312 784 192 629.921288359 192 432 c 0
 EndSplineSet
-Refer: 59 111 N 1 0 0 1 0 0 2
 EndChar
 
 StartChar: uni043F
@@ -35517,27 +35516,7 @@ Encoding: 1112 1112 846
 Width: 1024
 Flags: HW
 LayerCount: 2
-Back
-SplineSet
-144 -128 m 4
- 144 -4 259 96 400 96 c 4
- 541 96 656 -4 656 -128 c 4
- 656 -252 541 -352 400 -352 c 4
- 259 -352 144 -252 144 -128 c 4
-EndSplineSet
 Fore
-SplineSet
-96 -128 m 0
- 96 28.003187017 238.083807149 144 400 144 c 0
- 561.916192851 144 704 28.003187017 704 -128 c 0
- 704 -284.003187017 561.916192851 -400 400 -400 c 0
- 238.083807149 -400 96 -284.003187017 96 -128 c 0
-192 -128 m 0
- 192 -219.996812983 279.916192851 -304 400 -304 c 0
- 520.083807149 -304 608 -219.996812983 608 -128 c 0
- 608 -36.003187017 520.083807149 48 400 48 c 0
- 279.916192851 48 192 -36.003187017 192 -128 c 0
-EndSplineSet
 Refer: 89 106 N 1 0 0 1 0 0 2
 EndChar
 
@@ -36043,7 +36022,7 @@ EndChar
 
 StartChar: pi
 Encoding: 960 960 856
-Width: 2048
+Width: 1024
 Flags: HW
 LayerCount: 2
 Back
@@ -48490,7 +48469,7 @@ EndChar
 
 StartChar: arrowupdnbse
 Encoding: 8616 8616 1214
-Width: 2048
+Width: 1024
 Flags: HW
 LayerCount: 2
 Back
@@ -49842,7 +49821,7 @@ EndChar
 
 StartChar: alpha
 Encoding: 945 945 1253
-Width: 2048
+Width: 1024
 Flags: HW
 LayerCount: 2
 Back
@@ -50381,7 +50360,7 @@ EndChar
 
 StartChar: omega
 Encoding: 969 969 1264
-Width: 688
+Width: 1024
 Flags: HW
 LayerCount: 2
 Back
