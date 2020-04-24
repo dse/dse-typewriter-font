@@ -107,22 +107,38 @@ table > tbody {
 }
 
 @media (min-width: 600px) {
-    table.glyphs {
+    table.glyph-table,
+    table.compact-glyph-table {
         margin-left: 4ch;
     }
 }
 @media (min-width: 960px) {
-    table.glyphs {
+    table.glyph-table,
+    table.compact-glyph-table {
         font-size: 200%;
     }
 }
-table.glyphs th {
+table.glyph-table th,
+table.compact-glyph-table th {
     font-weight: normal;
-    text-decoration: underline;
     vertical-align: bottom;
 }
-table.glyphs td {
+table.glyph-table th {
+    text-decoration: underline;
+}
+table.glyph-table td,
+table.compact-glyph-table td {
     vertical-align: baseline;
+}
+
+table.compact-glyph-table {
+    table-layout: fixed;
+}
+table.compact-glyph-table > * > tr > *:not(:first-child) {
+    width: 3ch;
+}
+table.compact-glyph-table tbody {
+    border-top: 2px solid black;
 }
 
 /* oldstyle figures */

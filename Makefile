@@ -71,10 +71,10 @@ testing/%--ah.ttf: testing/%--nh.ttf Makefile
 	rm $@.tmp.ttf
 
 glyphs.inc.html: $(SRC) $(FFGLYPHS) Makefile
-	ffglyphs --list-blocks --class="glyphs" --format=html $(SRC) >$@.tmp.html
+	ffglyphs --list-blocks --class="glyph-table" --format=html $(SRC) >$@.tmp.html
 	mv $@.tmp.html $@
 glyphs-table.inc.html: $(SRC) $(FFGLYPHS) Makefile
-	ffglyphs --list-blocks --class="glyphs" --format=html2 $(SRC) >$@.tmp.html
+	ffglyphs --list-blocks --class="compact-glyph-table" --format=html2 $(SRC) >$@.tmp.html
 	mv $@.tmp.html $@
 glyphs.txt: $(SRC) Makefile
 	ffglyphs --list-blocks $(SRC) >$@.tmp.txt
