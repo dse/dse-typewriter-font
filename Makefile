@@ -22,6 +22,8 @@ TTFAUTOHINT = ttfautohint \
 	--ignore-restrictions \
 	--verbose
 
+FFGLYPHS = $(shell which ffglyphs)
+
 default: $(TTFS) glyphs.txt glyphs.html
 
 ttf/%.ttf: src/%.sfd Makefile
@@ -68,13 +70,16 @@ testing/%--ah.ttf: testing/%--nh.ttf Makefile
 	$(TTFAUTOHINT) $@.tmp.ttf $@
 	rm $@.tmp.ttf
 
-glyphs.inc.html: $(SRC) Makefile
+glyphs.inc.html: $(SRC) $(FFGLYPHS) Makefile
 	ffglyphs --list-blocks --class="glyphs" --format=html $(SRC) >$@.tmp.html
+	mv $@.tmp.html $@
+glyphs-table.inc.html: $(SRC) $(FFGLYPHS) Makefile
+	ffglyphs --list-blocks --class="glyphs" --format=html2 $(SRC) >$@.tmp.html
 	mv $@.tmp.html $@
 glyphs.txt: $(SRC) Makefile
 	ffglyphs --list-blocks $(SRC) >$@.tmp.txt
 	mv $@.tmp.txt $@
-glyphs.html: glyphs.inc.html glyphs.ssi.html Makefile
+glyphs.html: glyphs.inc.html glyphs-table.inc.html glyphs.ssi.html Makefile
 	ssi glyphs.ssi.html >$@.tmp.html
 	mv $@.tmp.html $@
 macedit:
