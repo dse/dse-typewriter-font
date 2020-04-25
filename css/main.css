@@ -107,37 +107,30 @@ table > tbody {
 }
 
 @media (min-width: 600px) {
-    table.glyph-table,
-    table.compact-glyph-table {
+    table.data-table {
         margin-left: 4ch;
     }
 }
 @media (min-width: 960px) {
-    table.glyph-table,
-    table.compact-glyph-table {
+    table.glyph-table {
         font-size: 200%;
     }
 }
-table.glyph-table th,
-table.compact-glyph-table th {
+table.data-table th {
     font-weight: normal;
     vertical-align: bottom;
 }
-table.glyph-table th {
-    text-decoration: underline;
-}
-table.glyph-table td,
-table.compact-glyph-table td {
+table.data-table td,
     vertical-align: baseline;
 }
-
-table.compact-glyph-table {
+table.data-table {
     table-layout: fixed;
 }
 table.compact-glyph-table > * > tr > *:not(:first-child) {
     width: 3ch;
 }
-table.compact-glyph-table tbody {
+table.data-table thead + tbody {
+    margin-top: -2px;
     border-top: 2px solid black;
 }
 
