@@ -24,7 +24,7 @@ TTFAUTOHINT = ttfautohint \
 
 FFGLYPHS = $(shell which ffglyphs)
 
-default: $(TTFS) glyphs.txt glyphs.html
+default: $(TTFS) glyphs.txt glyphs.html coverage-detail.html
 
 ttf/%.ttf: src/%.sfd Makefile
 	bin/check $(SRC)
@@ -74,17 +74,25 @@ glyphs.inc.html: $(SRC) $(FFGLYPHS) Makefile
 	ffglyphs --list-blocks --heading-tag-name='h3' --class="data-table glyph-table complete-glyph-table" --format=html $(SRC) >$@.tmp.html
 	mv $@.tmp.html $@
 glyphs-table.inc.html: $(SRC) $(FFGLYPHS) Makefile
-	ffglyphs --list-blocks --class="data-table glyph-table compact-glyph-table" --format=html2 $(SRC) >$@.tmp.html
+	ffglyphs --list-blocks --class="data-table glyph-table compact-glyph-table" --format=html --compact $(SRC) >$@.tmp.html
 	mv $@.tmp.html $@
 coverage.inc.html: $(SRC) $(FFGLYPHS) Makefile
-	ffglyphs --percentages --class="data-table unicode-block-coverage-table" --format=html2 $(SRC) >$@.tmp.html
+	ffglyphs --coverage-summary --class="data-table unicode-block-coverage-table" --format=html $(SRC) >$@.tmp.html
+	mv $@.tmp.html $@
+coverage-detail.inc.html: $(SRC) $(FFGLYPHS) Makefile
+	ffglyphs --coverage-detail --class="data-table glyph-table complete-glyph-table unicode-block-coverage-detail-table" --format=html $(SRC) >$@.tmp.html
 	mv $@.tmp.html $@
 glyphs.txt: $(SRC) Makefile
 	ffglyphs --list-blocks $(SRC) >$@.tmp.txt
 	mv $@.tmp.txt $@
-glyphs.html: glyphs.inc.html glyphs-table.inc.html coverage.inc.html glyphs.ssi.html Makefile
-	ssi glyphs.ssi.html >$@.tmp.html
+
+glyphs.html: glyphs.ssi.html glyphs.inc.html glyphs-table.inc.html coverage.inc.html Makefile
+	ssi $< >$@.tmp.html
 	mv $@.tmp.html $@
+coverage-detail.html: coverage-detail.ssi.html coverage-detail.inc.html Makefile
+	ssi $< >$@.tmp.html
+	mv $@.tmp.html $@
+
 macedit:
 	/Applications/FontForge.app/Contents/Resources/opt/local/bin/fontforge "$$(realpath $(SRC))"
 maceditttf:
