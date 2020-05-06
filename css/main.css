@@ -10,6 +10,12 @@ html {
     font-family: 'DSE Typewriter web font';
     line-height: 1.0;
 }
+body {
+    background-image: url('../images/cockle.jpg');
+    background-size: 100% auto;
+    background-repeat: repeat-y;
+    background-position: center top;
+}
 @media (min-width: 600px) {
     body {
         font-size: 18px;
@@ -21,7 +27,7 @@ code, pre, kbd, samp {
 }
 pre {
     overflow-x: auto;
-    background-color: #eee;
+    background-color: rgba(255, 255, 0, 0.125);
     padding: 0.5rem 2ch;
     box-sizing: border-box;
 }
