@@ -11,9 +11,10 @@ html {
     line-height: 1.0;
 }
 @media (min-width: 600px) {
-    html {
+    body {
         font-size: 18px;
     }
+    /* leave font-size on <html> alone */
 }
 code, pre, kbd, samp {
     font-family: 'DSE Typewriter web font';
@@ -96,7 +97,7 @@ table > tbody {
 }
 .breadcrumbs ul {
     list-style: none;
-    padding-left: 0;
+    margin-left: 0;
 }
 .breadcrumbs ul > li {
     display: inline-block;
@@ -112,8 +113,13 @@ table > tbody {
     }
 }
 @media (min-width: 960px) {
-    table.glyph-table {
-        font-size: 200%;
+    table.main-glyph-table {
+        font-size: 133.333333%;
+        margin-left: 3ch;
+    }
+    table.compact-glyph-table {
+        font-size: 133.333333%;
+        margin-left: 3ch;
     }
 }
 table.data-table th {
@@ -186,4 +192,30 @@ table.data-table thead + tbody {
 
 tr.combined-ss {
     color: blue;
+}
+
+header {
+    border-bottom: 1px solid black;
+}
+header nav .site-title {
+    display: inline-block;
+}
+header nav ul {
+    display: inline-block;
+    margin-left: 0;
+    list-style: none;
+}
+header nav ul li {
+    display: inline-block;
+}
+header nav ul li::before {
+    content: '*';
+}
+
+tr.is-not-covered {
+    background-color: rgba(255, 0, 0, 0.125);
+    text-decoration-line: line-through;
+    text-decoration-color: rgba(255, 0, 0, 0.5);
+    text-decoration-style: solid;
+    text-decoration-thickness: 1px;
 }
