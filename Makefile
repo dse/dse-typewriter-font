@@ -24,7 +24,7 @@ TTFAUTOHINT = ttfautohint \
 
 FFGLYPHS = $(shell which ffglyphs)
 
-default: $(TTFS) glyphs.txt glyphs.html coverage-detail.html
+default: $(TTFS) glyphs.txt glyphs.html coverage-detail.html coverage-summary.html
 
 ttf/%.ttf: src/%.sfd Makefile
 	bin/check $(SRC)
@@ -71,16 +71,22 @@ testing/%--ah.ttf: testing/%--nh.ttf Makefile
 	rm $@.tmp.ttf
 
 glyphs.inc.html: $(SRC) $(FFGLYPHS) Makefile
-	ffglyphs --list-blocks --heading-tag-name='h3' --class="data-table glyph-table complete-glyph-table" --format=html $(SRC) >$@.tmp.html
+	ffglyphs --list-blocks --heading-tag-name='h3' --class="data-table glyph-table main-glyph-table" --format=html $(SRC) >$@.tmp.html
 	mv $@.tmp.html $@
 glyphs-table.inc.html: $(SRC) $(FFGLYPHS) Makefile
 	ffglyphs --list-blocks --class="data-table glyph-table compact-glyph-table" --format=html --compact $(SRC) >$@.tmp.html
 	mv $@.tmp.html $@
 coverage.inc.html: $(SRC) $(FFGLYPHS) Makefile
-	ffglyphs --coverage-summary --class="data-table unicode-block-coverage-table" --format=html $(SRC) >$@.tmp.html
+	ffglyphs --coverage-summary --class="data-table unicode-block-coverage-table coverage-summary-table" --format=html $(SRC) >$@.tmp.html
 	mv $@.tmp.html $@
 coverage-detail.inc.html: $(SRC) $(FFGLYPHS) Makefile
-	ffglyphs --coverage-detail --class="data-table glyph-table complete-glyph-table unicode-block-coverage-detail-table" --format=html $(SRC) >$@.tmp.html
+	ffglyphs --coverage-detail --class="data-table glyph-table coverage-detail-table" --format=html $(SRC) >$@.tmp.html
+	mv $@.tmp.html $@
+coverage-summary.inc.html: $(SRC) $(FFGLYPHS) Makefile
+	ffglyphs --coverage-summary --with-anchors --anchor-page-url="coverage-detail.html" --class="data-table glyph-table coverage-summary-table" --format=html $(SRC) >$@.tmp.html
+	mv $@.tmp.html $@
+toc.inc.html: $(SRC) $(FFGLYPHS) Makefile
+	ffglyphs --table-of-contents --with-anchors --anchor-page-url="coverage-detail.html" --format=html $(SRC) >$@.tmp.html
 	mv $@.tmp.html $@
 glyphs.txt: $(SRC) Makefile
 	ffglyphs --list-blocks $(SRC) >$@.tmp.txt
@@ -89,9 +95,15 @@ glyphs.txt: $(SRC) Makefile
 glyphs.html: glyphs.ssi.html glyphs.inc.html glyphs-table.inc.html coverage.inc.html Makefile
 	ssi $< >$@.tmp.html
 	mv $@.tmp.html $@
-coverage-detail.html: coverage-detail.ssi.html coverage-detail.inc.html Makefile
+coverage-detail.html: coverage-detail.ssi.html coverage-detail.inc.html toc.inc.html Makefile
 	ssi $< >$@.tmp.html
 	mv $@.tmp.html $@
+coverage-summary.html: coverage-summary.ssi.html coverage-summary.inc.html toc.inc.html Makefile
+	ssi $< >$@.tmp.html
+	mv $@.tmp.html $@
+
+pages: coverage-detail.html coverage-summary.html glyphs.html
+.PHONY: pages
 
 macedit:
 	/Applications/FontForge.app/Contents/Resources/opt/local/bin/fontforge "$$(realpath $(SRC))"
