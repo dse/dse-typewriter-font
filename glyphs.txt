@@ -750,6 +750,7 @@ U+2089       8329  ₉     SUBSCRIPT NINE
 # Currency Symbols
 
 U+20A4       8356  ₤     LIRA SIGN
+U+20A7       8359  ₧     PESETA SIGN
 U+20AC       8364  €     EURO SIGN
 U+20AF       8367  ₯     DRACHMA SIGN
 # Letterlike Symbols
