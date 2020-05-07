@@ -119,9 +119,7 @@ sub checkChar {
                 if ($codepoint >= 9600 && $codepoint < 9632) {
                     return;
                 }
-                printf("BBB %s: needs to be converted to Back layer with stroke\n",
-                       $char->{toString});
-                $ok = 0;
+                printf("BBB %s: **may** need to be converted to Back layer with stroke\n", $char->{toString});
                 return;
             }
             if ($fore->{referenceCount} && !$fore->{splinesetCount}) {
