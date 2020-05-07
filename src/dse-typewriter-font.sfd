@@ -22,7 +22,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 0
 CreationTime: 1582156054
-ModificationTime: 1588865003
+ModificationTime: 1588865525
 PfmFamily: 17
 TTFWeight: 400
 TTFWidth: 5
@@ -60,7 +60,7 @@ NameList: AGL For New Fonts
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 8288 16 9
+WinInfo: 8512 16 9
 BeginPrivate: 0
 EndPrivate
 Grid
@@ -8497,7 +8497,7 @@ Grid
 EndSplineSet
 TeXData: 1 0 0 346030 173015 115343 0 -1048576 115343 783286 444596 497025 792723 393216 433062 380633 303038 157286 324010 404750 52429 2506097 1059062 262144
 AnchorClass2: "ogonek"""  "cedilla"""  "top""" 
-BeginChars: 65589 1336
+BeginChars: 65590 1341
 
 StartChar: space
 Encoding: 32 32 0
@@ -18405,21 +18405,8 @@ Encoding: 188 188 442
 Width: 1024
 Flags: HW
 LayerCount: 2
-Back
-SplineSet
-192 624 m 25
- 832 624 l 1049
-EndSplineSet
 Fore
-SplineSet
-192 576 m 2
- 165.50808 576 144 597.50808 144 624 c 0
- 144 650.49192 165.50808 672 192 672 c 2
- 832 672 l 2
- 858.49192 672 880 650.49192 880 624 c 0
- 880 597.50808 858.49192 576 832 576 c 2
- 192 576 l 2
-EndSplineSet
+Refer: 1337 -1 N 1 0 0 1 0 0 2
 Refer: 1283 -1 N 1 0 0 1 0 -480 2
 Refer: 1280 -1 N 1 0 0 1 0 480 2
 EndChar
@@ -18429,22 +18416,9 @@ Encoding: 189 189 443
 Width: 1024
 Flags: HW
 LayerCount: 2
-Back
-SplineSet
-192 624 m 25
- 832 624 l 1049
-EndSplineSet
 Fore
-SplineSet
-192 576 m 2
- 165.50808 576 144 597.50808 144 624 c 0
- 144 650.49192 165.50808 672 192 672 c 2
- 832 672 l 2
- 858.49192 672 880 650.49192 880 624 c 0
- 880 597.50808 858.49192 576 832 576 c 2
- 192 576 l 2
-EndSplineSet
-Refer: 1280 -1 S 1 0 0 1 0 480 2
+Refer: 1337 -1 S 1 0 0 1 0 0 2
+Refer: 1280 -1 N 1 0 0 1 0 480 2
 Refer: 1281 -1 N 1 0 0 1 0 -480 2
 EndChar
 
@@ -18453,23 +18427,9 @@ Encoding: 190 190 444
 Width: 1024
 Flags: HW
 LayerCount: 2
-Back
-SplineSet
-192 624 m 25
- 832 624 l 1049
-EndSplineSet
 Fore
-SplineSet
-192 576 m 2
- 165.50808 576 144 597.50808 144 624 c 0
- 144 650.49192 165.50808 672 192 672 c 2
- 832 672 l 2
- 858.49192 672 880 650.49192 880 624 c 0
- 880 597.50808 858.49192 576 832 576 c 2
- 192 576 l 2
-631.024442163 1054.02940889 m 1024
-EndSplineSet
-Refer: 1282 -1 S 1 0 0 1 0 480 2
+Refer: 1337 -1 N 1 0 0 1 0 0 2
+Refer: 1282 -1 N 1 0 0 1 0 480 2
 Refer: 1283 -1 N 1 0 0 1 0 -480 2
 EndChar
 
@@ -53055,6 +53015,72 @@ Flags: HW
 LayerCount: 2
 Fore
 Refer: 1288 -1 S 1 0 0 1 0 -480 2
+EndChar
+
+StartChar: oneeighth
+Encoding: 8539 8539 1336
+Width: 1024
+Flags: HW
+LayerCount: 2
+Fore
+Refer: 1280 -1 S 1 0 0 1 0 480 2
+Refer: 1287 -1 N 1 0 0 1 0 -480 2
+Refer: 1337 -1 N 1 0 0 1 0 0 2
+EndChar
+
+StartChar: fraction.horizontal.bar
+Encoding: 65589 -1 1337
+Width: 1024
+Flags: HW
+LayerCount: 2
+Back
+SplineSet
+192 624 m 29
+ 832 624 l 1053
+EndSplineSet
+Fore
+SplineSet
+192 576 m 2
+ 165.50808 576 144 597.50808 144 624 c 0
+ 144 650.49192 165.50808 672 192 672 c 2
+ 832 672 l 2
+ 858.49192 672 880 650.49192 880 624 c 0
+ 880 597.50808 858.49192 576 832 576 c 2
+ 192 576 l 2
+EndSplineSet
+EndChar
+
+StartChar: threeeighths
+Encoding: 8540 8540 1338
+Width: 1024
+Flags: HW
+LayerCount: 2
+Fore
+Refer: 1282 -1 S 1 0 0 1 0 480 2
+Refer: 1287 -1 N 1 0 0 1 0 -480 2
+Refer: 1337 -1 N 1 0 0 1 0 0 2
+EndChar
+
+StartChar: fiveeighths
+Encoding: 8541 8541 1339
+Width: 1024
+Flags: HW
+LayerCount: 2
+Fore
+Refer: 1284 -1 S 1 0 0 1 0 480 2
+Refer: 1287 -1 N 1 0 0 1 0 -480 2
+Refer: 1337 -1 N 1 0 0 1 0 0 2
+EndChar
+
+StartChar: seveneighths
+Encoding: 8542 8542 1340
+Width: 1024
+Flags: HW
+LayerCount: 2
+Fore
+Refer: 1286 -1 S 1 0 0 1 0 480 2
+Refer: 1287 -1 N 1 0 0 1 0 -480 2
+Refer: 1337 -1 N 1 0 0 1 0 0 2
 EndChar
 EndChars
 EndSplineFont
