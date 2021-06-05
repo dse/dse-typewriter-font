@@ -5,28 +5,4 @@
 
 -   ogonek
 
-```
-U+03B1      α       GREEK SMALL LETTER ALPHA
-U+03B2      β       GREEK SMALL LETTER BETA
-U+03B4      δ       GREEK SMALL LETTER DELTA
-U+03B5      ε       GREEK SMALL LETTER EPSILON
-U+03BC      μ       GREEK SMALL LETTER MU
-U+03C0      π       GREEK SMALL LETTER PI
-U+03C3      σ       GREEK SMALL LETTER SIGMA
-U+03C4      τ       GREEK SMALL LETTER TAU
-U+03C6      φ       GREEK SMALL LETTER PHI
-U+03D5      ϕ       GREEK PHI SYMBOL (GREEK SMALL LETTER SCRIPT PHI)
-
-U+207F      ⁿ       SUPERSCRIPT LATIN SMALL LETTER N
-U+20A7      ₧       PESETA SIGN
-U+25D8      ◘       INVERSE BULLET
-U+25D9      ◙       INVERSE WHITE CIRCLE
-U+2660      ♠       BLACK SPADE SUIT
-U+2663      ♣       BLACK CLUB SUIT
-U+2665      ♥       BLACK HEART SUIT
-U+2666      ♦       BLACK DIAMOND SUIT
-U+266A      ♪       EIGHTH NOTE
-U+266B      ♫       BEAMED EIGHTH NOTES (BARRED EIGHTH NOTES)
-
-U+1D719     𝜙       MATHEMATICAL ITALIC PHI SYMBOL
-```
+-   6 and 9 could **maybe** be just a little bit narrower to match better with 8, 3
