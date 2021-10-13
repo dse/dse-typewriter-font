@@ -1,14 +1,12 @@
-SRC = src/dse-typewriter-font.sfd
-TTF = ttf/dse-typewriter-font.ttf
+SRC    = src/dse-typewriter-font.sfd
+TTF    = ttf/dse-typewriter-font.ttf
 
-# 1.2 line height variant
+# variants
 TTF_LH = ttf/dse-typewriter-font-lh.ttf
+TTF_NH = ttf/dse-typewriter-font-nh.ttf
+TTF_AH = ttf/dse-typewriter-font-ah.ttf
 
-# nohint and autohint variants
-TTF__NH = testing/dse-typewriter-font--nh.ttf
-TTF__AH = testing/dse-typewriter-font--ah.ttf
-
-TTFS = $(TTF) $(TTF_LH) $(TTF__NH) $(TTF__AH)
+TTFS = $(TTF) $(TTF_LH) $(TTF_NH) $(TTF_AH)
 
 VERSION = $(shell date +"%Y.%m.%d")
 SFNT_REVISION = $(shell date +"%Y%m.%d")
@@ -22,52 +20,55 @@ TTFAUTOHINT = ttfautohint \
 	--ignore-restrictions \
 	--verbose
 
+TTFAUTOHINT_DEHINT = ttfautohint \
+	--dehint \
+	--windows-compatibility \
+	--ignore-restrictions \
+	--verbose
+
+CONVERT_LH_FONT = --line-height=1.2 \
+                  --font-name='DSETypewriterLH' \
+                  --family-name='DSE Typewriter LH' \
+                  --full-name='DSE Typewriter LH'
+
+CONVERT_NH_FONT = --font-name='DSETypewriterNH' \
+                  --family-name='DSE Typewriter NH' \
+                  --full-name='DSE Typewriter NH'
+
+CONVERT_AH_FONT = --font-name='DSETypewriterAH' \
+                  --family-name='DSE Typewriter AH' \
+                  --full-name='DSE Typewriter AH'
+
 FFGLYPHS = $(shell which ffglyphs)
 
-default: $(TTFS) glyphs.txt glyphs.html coverage-detail.html coverage-summary.html
+.PHONY: default
+default: fonts glyphs.txt glyphs.html coverage-detail.html coverage-summary.html
+
+.PHONY: fonts
+fonts: $(TTFS)
 
 ttf/%.ttf: src/%.sfd Makefile
 	bin/check $(SRC)
-	ffscript \
-		--encode-unicode \
-		--version="$(VERSION)" \
-		$< $@.tmp.ttf
+	bin/convert --version="$(VERSION)" $< $@.tmp.ttf
 	mv $@.tmp.ttf $@
 
 ttf/%-lh.ttf: src/%.sfd Makefile
 	bin/check $(SRC)
-	ffscript \
-		--encode-unicode \
-		--version="$(VERSION)" \
-		--line-height=1.2 \
-		--font-name='DSETypewriterLH' \
-		--family-name='DSE Typewriter LH' \
-		--full-name='DSE Typewriter LH' \
-		$< $@.tmp.ttf
+	bin/convert --version="$(VERSION)" $(CONVERT_LH_FONT) $< $@.tmp.ttf
 	mv $@.tmp.ttf $@
 
-testing/%--nh.ttf: src/%.sfd Makefile
+ttf/%-nh.ttf: src/%.sfd Makefile
 	bin/check $(SRC)
-	mkdir -p testing
-	ffscript \
-		--encode-unicode \
-		--version="$(VERSION)" \
-		--no-hints \
-		--omit-instructions \
-		--font-name='DSETypewriterNH' \
-		--family-name='DSE Typewriter NH' \
-		--full-name='DSE Typewriter NH' \
-		$< $@.tmp.ttf
-	mv $@.tmp.ttf $@
+	bin/convert --version="$(VERSION)" $(CONVERT_NH_FONT) $< $@.tmp.ttf
+	$(TTFAUTOHINT_DEHINT) $@.tmp.ttf $@.tmp.2.ttf
+	mv $@.tmp.2.ttf $@
+	rm $@.tmp.ttf
 
-testing/%--ah.ttf: testing/%--nh.ttf Makefile
-	mkdir -p testing
-	ffscript \
-		--font-name='DSETypewriterAH' \
-		--family-name='DSE Typewriter AH' \
-		--full-name='DSE Typewriter AH' \
-		$< $@.tmp.ttf
-	$(TTFAUTOHINT) $@.tmp.ttf $@
+ttf/%-ah.ttf: src/%.sfd Makefile
+	bin/check $(SRC)
+	bin/convert --version="$(VERSION)" $(CONVERT_AH_FONT) $< $@.tmp.ttf
+	$(TTFAUTOHINT) $@.tmp.ttf $@.tmp.2.ttf
+	mv $@.tmp.2.ttf $@
 	rm $@.tmp.ttf
 
 glyphs.inc.html: $(SRC) $(FFGLYPHS) Makefile

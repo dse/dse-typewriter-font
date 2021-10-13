@@ -1,0 +1,71 @@
+#!/usr/bin/env fontforge
+# -*- mode: python; coding: utf-8 -*-
+
+import fontforge
+import sys
+import re
+import argparse
+
+def convertFont(args):
+    font = fontforge.open(args.source_filename)
+    font.encoding = 'iso10646-1' # unicode
+    if args.version:
+        font.version = args.version
+    if args.font_name:
+        font.fontname = args.font_name
+    if args.full_name:
+        font.fullname = args.full_name
+    if args.family_name:
+        font.familyname = args.family_name
+    if args.line_height:
+        setLineHeight(font, args.line_height)
+    else:
+        setLineHeight(font)
+    if re.search(r'\.sfd$', args.dest_filename):
+        font.save(args.dest_filename)
+    else:
+        font.generate(args.dest_filename)
+
+def setLineHeight(font, lineHeight = None):
+    if lineHeight:
+        height = font.em
+        finalHeight = int(0.5 + lineHeight * height)
+        add = finalHeight - height
+        addAscent = int(0.5 + 1.0 * add / 2)
+        addDescent = add - addAscent
+        finalAscent = font.ascent + addAscent
+        finalDescent = font.descent + addDescent
+        font.ascent = finalAscent
+        font.descent = finalDescent
+        font.hhea_ascent     = finalAscent
+        font.os2_typoascent  = finalAscent
+        font.os2_winascent   = finalAscent
+        font.hhea_descent    = -finalDescent
+        font.os2_typodescent = -finalDescent
+        font.os2_windescent  = finalDescent
+    else:
+        ascent = font.ascent
+        descent = font.descent
+        font.hhea_ascent     = ascent
+        font.os2_typoascent  = ascent
+        font.os2_winascent   = ascent
+        font.hhea_descent    = -descent
+        font.os2_typodescent = -descent
+        font.os2_windescent  = descent
+
+def main():
+    if len(sys.argv) < 3:
+        print("not enough arguments", file = sys.stderr)
+        exit(1)
+    parser = argparse.ArgumentParser()
+    parser.add_argument('source_filename')
+    parser.add_argument('dest_filename')
+    parser.add_argument('--version', type = str)
+    parser.add_argument('--font-name', type = str)
+    parser.add_argument('--full-name', type = str)
+    parser.add_argument('--family-name', type = str)
+    parser.add_argument('--line-height', type = float)
+    args = parser.parse_args()
+    convertFont(args)
+
+main()
