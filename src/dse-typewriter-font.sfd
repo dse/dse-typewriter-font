@@ -22,7 +22,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 0
 CreationTime: 1582156054
-ModificationTime: 1588887249
+ModificationTime: 1634163087
 PfmFamily: 17
 TTFWeight: 400
 TTFWidth: 5
@@ -53581,8 +53581,8 @@ EndChar
 
 StartChar: spade
 Encoding: 9824 9824 1361
-Width: 1021
-Flags: HW
+Width: 1024
+Flags: HWO
 LayerCount: 2
 Back
 SplineSet
@@ -54295,7 +54295,7 @@ EndChar
 StartChar: musicalnotedbl
 Encoding: 9835 9835 1370
 Width: 1024
-Flags: HWO
+Flags: HW
 LayerCount: 2
 Back
 SplineSet
