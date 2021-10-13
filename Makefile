@@ -106,12 +106,6 @@ coverage-summary.html: coverage-summary.ssi.html coverage-summary.inc.html toc.i
 pages: coverage-detail.html coverage-summary.html glyphs.html
 .PHONY: pages
 
-macedit:
-	/Applications/FontForge.app/Contents/Resources/opt/local/bin/fontforge "$$(realpath $(SRC))"
-maceditttf:
-	/Applications/FontForge.app/Contents/Resources/opt/local/bin/fontforge "$$(realpath $(TTF))"
-maceditttfah:
-	/Applications/FontForge.app/Contents/Resources/opt/local/bin/fontforge "$$(realpath $(TTF__AH))"
 publish:
 	ssh dse@webonastick.com "bash -c 'cd /www/webonastick.com/htdocs/fonts/dse-typewriter && git pull'"
 
