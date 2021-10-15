@@ -103,11 +103,13 @@ coverage-summary.html: coverage-summary.ssi.html coverage-summary.inc.html toc.i
 	ssi $< >$@.tmp.html
 	mv $@.tmp.html $@
 
-pages: coverage-detail.html coverage-summary.html glyphs.html
 .PHONY: pages
+pages: coverage-detail.html coverage-summary.html glyphs.html
 
+.PHONY: publish
 publish:
 	ssh dse@webonastick.com "bash -c 'cd /www/webonastick.com/htdocs/fonts/dse-typewriter && git pull'"
 
+.PHONY: clean
 clean:
 	rm -f $(TTFS) *~ '#'*'#'
