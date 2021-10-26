@@ -39,10 +39,12 @@ CONVERT_AH_FONT = --font-name='DSETypewriterAH' \
                   --family-name='DSE Typewriter AH' \
                   --full-name='DSE Typewriter AH'
 
+PAGES = website/coverage-detail.html website/coverage-summary.html website/glyphs.html
+
 FFGLYPHS = $(shell which ffglyphs)
 
 .PHONY: default
-default: fonts glyphs.txt website/glyphs.html website/coverage-detail.html website/coverage-summary.html
+default: fonts glyphs.txt $(PAGES)
 
 .PHONY: fonts
 fonts: $(TTFS)
@@ -106,7 +108,7 @@ website/coverage-summary.html: website/coverage-summary.ssi.html website/coverag
 	mv $@.tmp.html $@
 
 .PHONY: pages
-pages: website/coverage-detail.html website/coverage-summary.html website/glyphs.html
+pages: $(PAGES)
 
 .PHONY: publish
 publish:
