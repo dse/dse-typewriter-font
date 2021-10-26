@@ -42,7 +42,7 @@ CONVERT_AH_FONT = --font-name='DSETypewriterAH' \
 FFGLYPHS = $(shell which ffglyphs)
 
 .PHONY: default
-default: fonts glyphs.txt glyphs.html coverage-detail.html coverage-summary.html
+default: fonts glyphs.txt website/glyphs.html website/coverage-detail.html website/coverage-summary.html
 
 .PHONY: fonts
 fonts: $(TTFS)
@@ -71,40 +71,42 @@ ttf/%-ah.ttf: src/%.sfd Makefile
 	mv $@.tmp.2.ttf $@
 	rm $@.tmp.ttf
 
-glyphs.inc.html: $(SRC) $(FFGLYPHS) Makefile
+# smelled like the north end of a south bound billy goat
+
+website/glyphs.inc.html: $(SRC) $(FFGLYPHS) Makefile
 	ffglyphs --list-blocks --heading-tag-name='h3' --class="data-table glyph-table main-glyph-table" --format=html $(SRC) >$@.tmp.html
 	mv $@.tmp.html $@
-glyphs-table.inc.html: $(SRC) $(FFGLYPHS) Makefile
+website/glyphs-table.inc.html: $(SRC) $(FFGLYPHS) Makefile
 	ffglyphs --list-blocks --class="data-table glyph-table compact-glyph-table" --format=html --compact $(SRC) >$@.tmp.html
 	mv $@.tmp.html $@
-coverage.inc.html: $(SRC) $(FFGLYPHS) Makefile
+website/coverage.inc.html: $(SRC) $(FFGLYPHS) Makefile
 	ffglyphs --coverage-summary --class="data-table unicode-block-coverage-table coverage-summary-table" --format=html $(SRC) >$@.tmp.html
 	mv $@.tmp.html $@
-coverage-detail.inc.html: $(SRC) $(FFGLYPHS) Makefile
+website/coverage-detail.inc.html: $(SRC) $(FFGLYPHS) Makefile
 	ffglyphs --coverage-detail --class="data-table glyph-table coverage-detail-table" --format=html $(SRC) >$@.tmp.html
 	mv $@.tmp.html $@
-coverage-summary.inc.html: $(SRC) $(FFGLYPHS) Makefile
+website/coverage-summary.inc.html: $(SRC) $(FFGLYPHS) Makefile
 	ffglyphs --coverage-summary --with-anchors --anchor-page-url="coverage-detail.html" --class="data-table glyph-table coverage-summary-table" --format=html $(SRC) >$@.tmp.html
 	mv $@.tmp.html $@
-toc.inc.html: $(SRC) $(FFGLYPHS) Makefile
+website/toc.inc.html: $(SRC) $(FFGLYPHS) Makefile
 	ffglyphs --table-of-contents --with-anchors --anchor-page-url="coverage-detail.html" --format=html $(SRC) >$@.tmp.html
 	mv $@.tmp.html $@
 glyphs.txt: $(SRC) Makefile
 	ffglyphs --list-blocks $(SRC) >$@.tmp.txt
 	mv $@.tmp.txt $@
 
-glyphs.html: glyphs.ssi.html glyphs.inc.html glyphs-table.inc.html coverage.inc.html Makefile
+website/glyphs.html: website/glyphs.ssi.html website/glyphs.inc.html website/glyphs-table.inc.html website/coverage.inc.html Makefile
 	ssi $< >$@.tmp.html
 	mv $@.tmp.html $@
-coverage-detail.html: coverage-detail.ssi.html coverage-detail.inc.html toc.inc.html Makefile
+website/coverage-detail.html: website/coverage-detail.ssi.html website/coverage-detail.inc.html website/toc.inc.html Makefile
 	ssi $< >$@.tmp.html
 	mv $@.tmp.html $@
-coverage-summary.html: coverage-summary.ssi.html coverage-summary.inc.html toc.inc.html Makefile
+website/coverage-summary.html: website/coverage-summary.ssi.html website/coverage-summary.inc.html website/toc.inc.html Makefile
 	ssi $< >$@.tmp.html
 	mv $@.tmp.html $@
 
 .PHONY: pages
-pages: coverage-detail.html coverage-summary.html glyphs.html
+pages: website/coverage-detail.html website/coverage-summary.html website/glyphs.html
 
 .PHONY: publish
 publish:
