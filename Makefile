@@ -110,9 +110,17 @@ website/coverage-summary.html: website/coverage-summary.ssi.html website/coverag
 .PHONY: pages
 pages: $(PAGES)
 
+WEBSITE_DIR = /www/webonastick.com/htdocs/fonts/dse-typewriter
+WEBSITE_REPOS_DIR = /home/dse/git/dse.d/fonts.d/dse-typewriter-font/website
+
 .PHONY: publish
 publish:
-	ssh dse@webonastick.com "bash -c 'cd /www/webonastick.com/htdocs/fonts/dse-typewriter && git pull'"
+	ssh dse@webonastick.com "bash -c '\
+		cd $(WEBSITE_DIR) && \
+		git pull && \
+		ln -n -f -s $(WEBSITE_REPOS_DIR) $(WEBSITE_DIR) \
+		ln -n -f -s $(WEBSITE_REPOS_DIR)/ttf $(WEBSITE_DIR)/ttf
+	'"
 
 .PHONY: clean
 clean:
