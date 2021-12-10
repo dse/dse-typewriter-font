@@ -87,6 +87,10 @@ environments that support it, and there is a `.ttf` version.
 
 [SIL OFL 1.1](LICENSE.md)
 
+## Shoutouts, Thanks, etc.
+
+-   **Guy Ollerearnshaw**, for pointing out a bug in U+2567.
+
 ## Preview
 
 ![Sample (Mac)](images/sample-mac.png)
