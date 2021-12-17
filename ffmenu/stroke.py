@@ -1,6 +1,7 @@
-#!/usr/bin/env fontforge -lang=py
+#!/usr/bin/env fontforge
+# -*- mode: python; coding: utf-8 -*-
 #
-# Add this script to FontForge:
+# To add this script to FontForge:
 #
 # -   File -> Preferences
 # -   Script Menu
@@ -33,4 +34,4 @@ for code in codes:
         glyph = activeFont[code]
         ffutils.updateBackgroundStrokeGlyph(glyph)
     else:
-        sys.stderr.write("%d: no such glyph\n" % code)
+        print("%d: no such glyph" % code)
