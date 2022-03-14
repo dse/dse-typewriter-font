@@ -120,7 +120,6 @@ publish:
 		cd '$(WEBSITE_DIR)' && \
 		git pull && \
 		ln -n -f -s '$(REPOS_DIR)/website' '$(WEBSITE_DIR)'     \
-		ln -n -f -s '$(REPOS_DIR)/ttf'     '$(WEBSITE_DIR)/ttf' \
 	'"
 
 .PHONY: clean
