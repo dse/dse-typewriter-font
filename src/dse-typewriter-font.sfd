@@ -3,9 +3,9 @@ FontName: DSETypewriter
 FullName: DSE Typewriter
 FamilyName: DSE Typewriter
 Weight: Regular
-Copyright: Copyright (c) 2020, Darren Embry\n\nSIL OFL 1.1\n
+Copyright: Copyright (c) 2020-2022, Darren Embry\n\nSIL OFL 1.1\n
 UComments: "2020-2-19: Created with FontForge (http://fontforge.org)"
-Version: 001.000
+Version: 1.1.0
 StrokeWidth: 96
 ItalicAngle: 0
 UnderlinePosition: -192
@@ -22,7 +22,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 0
 CreationTime: 1582156054
-ModificationTime: 1647228902
+ModificationTime: 1648864706
 PfmFamily: 17
 TTFWeight: 400
 TTFWidth: 5
@@ -60,7 +60,7 @@ NameList: AGL For New Fonts
 DisplaySize: -72
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 0 23 9
+WinInfo: 64 8 2
 BeginPrivate: 0
 EndPrivate
 Grid
