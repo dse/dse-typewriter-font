@@ -47,15 +47,16 @@ default: $(ADDITIONAL_SFDS) $(TTFS)
 	mv "$@.tmp.sfd" "$@"
 
 ttf/%.ttf: src/%.sfd
-	ffscript --version="$(VERSION)" --sfnt-revision="$(SFNT_REVISION)" \
-	         "$<" "$@.tmp.ttf"
+	ffscript --version="$(VERSION)" --sfnt-revision="$(SFNT_REVISION)" "$<" "$@.tmp.ttf"
 	$(TTFAUTOHINT) "$@.tmp.ttf" "$@.tmp.2.ttf"
 	rm "$@.tmp.ttf"
 	mv "$@.tmp.2.ttf" "$@"
 
 %-hohints.ttf: %.ttf
-	$(TTFAUTOHINT_NOHINT) "$<" "$@.tmp.ttf"
-	mv "$@.tmp.ttf" "$@"
+	ffscript --font-name="%sNH" --family-name="%s NH" --full-name="%s NH" "$<" "$@.tmp.ttf"
+	$(TTFAUTOHINT_NOHINT) "$@.tmp.ttf" "$@.tmp.2.ttf"
+	rm "$@.tmp.ttf"
+	mv "$@.tmp.2.ttf" "$@"
 
 TTFAUTOHINT = ttfautohint \
 	--hinting-range-min=2 \
