@@ -13,7 +13,13 @@ TTFS = \
 	ttf/dse-typewriter-1point2.ttf \
 	ttf/dse-typewriter-slashzero.ttf \
 	ttf/dse-typewriter-slashzero-pica.ttf \
-	ttf/dse-typewriter-slashzero-1point2.ttf
+	ttf/dse-typewriter-slashzero-1point2.ttf \
+	ttf/dse-typewriter-hohints.ttf \
+	ttf/dse-typewriter-pica-hohints.ttf \
+	ttf/dse-typewriter-1point2-hohints.ttf \
+	ttf/dse-typewriter-slashzero-hohints.ttf \
+	ttf/dse-typewriter-slashzero-pica-hohints.ttf \
+	ttf/dse-typewriter-slashzero-1point2-hohints.ttf
 
 default: $(ADDITIONAL_SFDS) $(TTFS)
 
@@ -47,11 +53,21 @@ ttf/%.ttf: src/%.sfd
 	rm "$@.tmp.ttf"
 	mv "$@.tmp.2.ttf" "$@"
 
+%-hohints.ttf: %.ttf
+	$(TTFAUTOHINT_NOHINT) "$<" "$@.tmp.ttf"
+	mv "$@.tmp.ttf" "$@"
+
 TTFAUTOHINT = ttfautohint \
 	--hinting-range-min=2 \
 	--hinting-limit=50 \
 	--fallback-stem-width=96 \
 	--detailed-info \
+	--windows-compatibility \
+	--ignore-restrictions \
+	--verbose
+
+TTFAUTOHINT_NOHINT = ttfautohint \
+	--dehint \
 	--windows-compatibility \
 	--ignore-restrictions \
 	--verbose
