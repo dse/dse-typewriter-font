@@ -39,7 +39,7 @@ CONVERT_AH_FONT = --font-name='DSETypewriterAH' \
                   --family-name='DSE Typewriter AH' \
                   --full-name='DSE Typewriter AH'
 
-PAGES = website/coverage-detail.html website/coverage-summary.html website/glyphs.html
+PAGES = docs/coverage-detail.html docs/coverage-summary.html docs/glyphs.html
 
 FFGLYPHS = $(shell which ffglyphs)
 
@@ -75,35 +75,35 @@ ttf/%-ah.ttf: src/%.sfd Makefile
 
 # smelled like the north end of a south bound billy goat
 
-website/glyphs.inc.html: $(SRC) $(FFGLYPHS) Makefile
+docs/glyphs.inc.html: $(SRC) $(FFGLYPHS) Makefile
 	ffglyphs --list-blocks --heading-tag-name='h3' --class="data-table glyph-table main-glyph-table" --format=html $(SRC) >$@.tmp.html
 	mv $@.tmp.html $@
-website/glyphs-table.inc.html: $(SRC) $(FFGLYPHS) Makefile
+docs/glyphs-table.inc.html: $(SRC) $(FFGLYPHS) Makefile
 	ffglyphs --list-blocks --class="data-table glyph-table compact-glyph-table" --format=html --compact $(SRC) >$@.tmp.html
 	mv $@.tmp.html $@
-website/coverage.inc.html: $(SRC) $(FFGLYPHS) Makefile
+docs/coverage.inc.html: $(SRC) $(FFGLYPHS) Makefile
 	ffglyphs --coverage-summary --class="data-table unicode-block-coverage-table coverage-summary-table" --format=html $(SRC) >$@.tmp.html
 	mv $@.tmp.html $@
-website/coverage-detail.inc.html: $(SRC) $(FFGLYPHS) Makefile
+docs/coverage-detail.inc.html: $(SRC) $(FFGLYPHS) Makefile
 	ffglyphs --coverage-detail --class="data-table glyph-table coverage-detail-table" --format=html $(SRC) >$@.tmp.html
 	mv $@.tmp.html $@
-website/coverage-summary.inc.html: $(SRC) $(FFGLYPHS) Makefile
+docs/coverage-summary.inc.html: $(SRC) $(FFGLYPHS) Makefile
 	ffglyphs --coverage-summary --with-anchors --anchor-page-url="coverage-detail.html" --class="data-table glyph-table coverage-summary-table" --format=html $(SRC) >$@.tmp.html
 	mv $@.tmp.html $@
-website/toc.inc.html: $(SRC) $(FFGLYPHS) Makefile
+docs/toc.inc.html: $(SRC) $(FFGLYPHS) Makefile
 	ffglyphs --table-of-contents --with-anchors --anchor-page-url="coverage-detail.html" --format=html $(SRC) >$@.tmp.html
 	mv $@.tmp.html $@
 glyphs.txt: $(SRC) Makefile
 	ffglyphs --list-blocks $(SRC) >$@.tmp.txt
 	mv $@.tmp.txt $@
 
-website/glyphs.html: website/glyphs.ssi.html website/glyphs.inc.html website/glyphs-table.inc.html website/coverage.inc.html Makefile
+docs/glyphs.html: docs/glyphs.ssi.html docs/glyphs.inc.html docs/glyphs-table.inc.html docs/coverage.inc.html Makefile
 	ssi $< >$@.tmp.html
 	mv $@.tmp.html $@
-website/coverage-detail.html: website/coverage-detail.ssi.html website/coverage-detail.inc.html website/toc.inc.html Makefile
+docs/coverage-detail.html: docs/coverage-detail.ssi.html docs/coverage-detail.inc.html docs/toc.inc.html Makefile
 	ssi $< >$@.tmp.html
 	mv $@.tmp.html $@
-website/coverage-summary.html: website/coverage-summary.ssi.html website/coverage-summary.inc.html website/toc.inc.html Makefile
+docs/coverage-summary.html: docs/coverage-summary.ssi.html docs/coverage-summary.inc.html docs/toc.inc.html Makefile
 	ssi $< >$@.tmp.html
 	mv $@.tmp.html $@
 
@@ -111,7 +111,7 @@ website/coverage-summary.html: website/coverage-summary.ssi.html website/coverag
 pages: $(PAGES)
 
 WEBSITE_DIR = /www/webonastick.com/htdocs/fonts/dse-typewriter
-WEBSITE_REPOS_DIR = /home/dse/git/dse.d/fonts.d/dse-typewriter-font/website
+WEBSITE_REPOS_DIR = /home/dse/git/dse.d/fonts.d/dse-typewriter-font/docs
 REPOS_DIR = /home/dse/git/dse.d/fonts.d/dse-typewriter-font
 
 .PHONY: publish
@@ -119,7 +119,7 @@ publish:
 	ssh dse@webonastick.com "bash -c '\
 		cd '$(WEBSITE_DIR)' && \
 		git pull && \
-		ln -n -f -s '$(REPOS_DIR)/website' '$(WEBSITE_DIR)'     \
+		ln -n -f -s '$(REPOS_DIR)/docs' '$(WEBSITE_DIR)'     \
 	'"
 
 .PHONY: clean
