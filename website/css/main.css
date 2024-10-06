@@ -17,6 +17,9 @@ body {
     background-position: center top;
 }
 @media (min-width: 600px) {
+    html {
+        font-size: 18px;        /* so rems change */
+    }
     body {
         font-size: 18px;
     }
@@ -34,36 +37,20 @@ pre {
 h1, h2, h3, h4, h5, h6 {
     font-weight: normal;
 }
-h1 {
-    font-size: 200%;
-    color: red;
-    text-decoration: underline;
-}
-h2 {
-    font-size: 200%;
-    color: red;
-}
-h3 {
-    font-size: 200%;
-}
-h4 {
-    font-size: 100%;
-    text-decoration: underline;
-}
-h5 {
-    font-size: 100%;
-    text-decoration: underline;
-}
-h6 {
-    font-size: 100%;
-    text-decoration: underline;
-}
+h1 { font-size: 300%; text-shadow: 0.055em 0 0 currentcolor; }
+h2 { font-size: 200%; text-shadow: 0.055em 0 0 currentcolor; }
+h3 { font-size: 200%; }
+h4 { font-size: 100%; text-shadow: 0.055em 0 0 currentcolor; }
+h5 { font-size: 100%; }
+h6 { font-size: 100%; }
+
 textarea.textarea-font-trial-text {
     width: 100%;
     font-family: inherit;
     font-size: inherit;
     font-weight: inherit;
     box-sizing: border-box;
+    line-height: inherit;
 }
 .font-trial-text {
     transition: font-size 0.25s;
@@ -224,4 +211,36 @@ tr.is-not-covered {
     text-decoration-color: rgba(255, 0, 0, 0.5);
     text-decoration-style: solid;
     text-decoration-thickness: 1px;
+}
+
+.alert-message {
+    color: blue;
+}
+.alert-message h1,
+.alert-message h2,
+.alert-message h3,
+.alert-message h4,
+.alert-message h5,
+.alert-message h6 {
+    color: blue;
+}
+.alert-message a {
+    color: black;
+}
+
+.alert-message > *:last-child {
+    margin-bottom: 0;
+}
+.alert-message::before {
+    display: block;
+    content: '----------------------------------------------------------------------------';
+}
+.alert-message::after {
+    display: block;
+    content: '----------------------------------------------------------------------------';
+    margin-bottom: 1rem;
+}
+
+b, strong {
+    text-shadow: 0.055em 0 0 currentcolor;
 }
