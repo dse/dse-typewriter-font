@@ -9,7 +9,11 @@ typewriters.
 
 And to practice editing fonts directly in FontForge.
 
-## About This Font
+## You might actually like Old Timey Mono better.  I do.
+
+<https://webonastick.com/fonts/old-timey-mono/>
+
+## About DSE Typewriter
 
 This font is not the result of any scans or traces of samples,
 specimens, or other output from an actual typewriter.  I personally
@@ -22,9 +26,7 @@ typewriters of the period.
 
 Though this is intended to be useful as a coding font, I emphasized on
 aesthetics while maintaining some degree of readability.  There is
-room for improvement.  I may create a version of this that borrows
-from old "reproducing typewriter" fonts (e.g., Monotype No. 72L,
-Reproducing Typewriter).
+room for improvement.
 
 ## Features and Characteristics
 
